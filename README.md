@@ -20,3 +20,4 @@
 
  - https://design.google.com/icons/
  - https://facebook.github.io/react/
+ - https://developer.here.com/javascript-apis/documentation/v3/maps/topics/overview.html
