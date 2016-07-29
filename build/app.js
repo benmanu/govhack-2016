@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jQuery';
 import Button from './bootstrap/button';
 import Collapse from './bootstrap/collapse';
+import L from 'leaflet';
+
+// navigation
 
 let $sidebar = $('.sidebar');
 
@@ -11,25 +12,10 @@ $('.js-sidebar-toggle').on('click', (e) => {
     $sidebar.toggleClass('sidebar--active');
 });
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+// map
 
-    this.state = {
-      text: 'Test app....',
-    };
-  }
+let map = L.map('map').setView([51.505, -0.09], 13);
 
-  render() {
-    return (
-      <div>
-        <p>{this.state.text}</p>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);

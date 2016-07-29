@@ -1,6 +1,7 @@
 @import 'bootstrap/bootstrap';
 @import 'font/open-sans';
 @import 'material-icons/material-icons';
+@import 'leaflet/leaflet';
 @import 'form/form';
 
 * {
@@ -25,3 +26,4 @@ Styleguide 1.0
 @import 'components/header';
 @import 'components/sidebar';
 @import 'components/panel';
+@import 'components/map';

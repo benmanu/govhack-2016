@@ -15,3 +15,8 @@
     $ npm run css
     $ npm run css:watch
     $ npm run css:prod
+
+## links
+
+ - https://design.google.com/icons/
+ - https://facebook.github.io/react/
