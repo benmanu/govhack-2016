@@ -24,17 +24,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var $sidebar = (0, _jQuery2.default)('.sidebar');
 
 (0, _jQuery2.default)('.js-sidebar-toggle').on('click', function (e) {
-    e.preventDefault();
-    $sidebar.toggleClass('sidebar--active');
+  e.preventDefault();
+  $sidebar.toggleClass('sidebar--active');
 });
 
-// map
+// map - here
 
-var map = _leaflet2.default.map('map').setView([51.505, -0.09], 13);
+var platform = new H.service.Platform({
+  app_id: 'Y1emgTiFpymkkeMT9X4k',
+  app_code: '-JWWNQtd-cu-sDr0hsswwQ'
+});
 
-_leaflet2.default.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// Obtain the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate (and display) a map object:
+var map = new H.Map(document.getElementById('map'), defaultLayers.normal.map, {
+  zoom: 10,
+  center: { lat: 52.5, lng: 13.4 }
+});
+
+// Enable the event system on the map instance:
+var mapEvents = new H.mapevents.MapEvents(map);
+
+// Add event listeners:
+map.addEventListener('tap', function (evt) {
+  // Log 'tap' and 'mouse' events:
+  console.log(evt.type, evt.currentPointer.type);
+});
+
+var behavior = new H.mapevents.Behavior(mapEvents);
+
+// Create the default UI:
+var ui = H.ui.UI.createDefault(map, defaultLayers);
 
 },{"./bootstrap/button":2,"./bootstrap/collapse":3,"jQuery":5,"leaflet":6}],2:[function(require,module,exports){
 'use strict';
