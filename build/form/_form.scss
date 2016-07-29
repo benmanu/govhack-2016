@@ -1,0 +1,27 @@
+
+form {
+    fieldset {
+        .field {
+            @extend .form-group;
+        }
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        @extend .form-control;
+    }
+
+    input[type="submit"],
+    button {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+
+    .message {
+        &.bad {
+            @extend .alert;
+            @extend .alert-danger;
+        }
+    }
+}

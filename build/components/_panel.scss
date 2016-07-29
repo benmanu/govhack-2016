@@ -1,0 +1,42 @@
+/*
+#Panel
+
+Markup:
+<div class="panel">
+    <div class="panel__heading">
+        <h4 class="panel__heading-text">Panel heading</h4>
+    </div>
+    <div class="panel__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nihil nesciunt quae nam animi laudantium consectetur repellat optio accusantium, quam placeat itaque dolorum veniam blanditiis eveniet.</p>
+        </p>Sequi unde illum distinctio.</p>
+    </div>
+    <div class="panel__footer">
+        <p>Footer content.</p>
+    </div>
+</div>
+
+Styleguide 1.1
+*/
+.panel {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-radius: 3px;
+}
+
+.panel__heading {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid $gray-lighter;
+}
+
+.panel__heading-text {
+    font-weight: 300;
+}
+
+.panel__content {
+    padding: 1.5rem 1rem;
+}
+
+.panel__footer {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid $gray-lighter;
+}

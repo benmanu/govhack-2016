@@ -1,0 +1,27 @@
+@import 'bootstrap/bootstrap';
+@import 'font/open-sans';
+@import 'material-icons/material-icons';
+@import 'form/form';
+
+* {
+    box-sizing: border-box;
+}
+
+.content-padding {
+    height: 48px;
+}
+
+.content {
+    margin-top: 0.5rem;
+}
+
+/*
+#Components
+
+All of the base components for the website.
+
+Styleguide 1.0
+*/
+@import 'components/header';
+@import 'components/sidebar';
+@import 'components/panel';

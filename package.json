@@ -1,0 +1,49 @@
+{
+  "name": "govhack-2016",
+  "description": "",
+  "version": "0.0.1",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benmanu/govhack-2016.git"
+  },
+  "author": "Ben Manu",
+  "contributors": [
+    "Ben Manu"
+  ],
+  "main": "./dist/app.js",
+  "scripts": {
+    "setup": "npm install --global postcss-cli autoprefixer",
+    "build": "npm run js && npm run css",
+    "build:prod": "npm run js:prod && npm run css:prod",
+    "js": "browserify -t [ babelify ] build/app.js -o dist/bundle.js",
+    "js:watch": "watchify -t [ babelify ] build/app.js -o dist/bundle.js -v",
+    "js:prod": "browserify -t [ babelify ] -t [ envify --NODE_ENV production ] build/app.js -o dist/bundle.js",
+    "css": "node-sass build/app.scss dist/bundle.css && npm run autoprefixer",
+    "css:watch": "node-sass build/app.scss dist/bundle.css -w",
+    "css:prod": "node-sass --output-style=compact build/app.scss dist/bundle.css && npm run autoprefixer",
+    "autoprefixer": "postcss --use autoprefixer dist/bundle.css -d dist/",
+    "lint": "eslint lib/**"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "envify": "^3.4.1",
+    "jquery": "^3.1.0",
+    "lodash": "^4.13.1",
+    "node-sass": "^3.7.0",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.11.1",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.2.2"
+  }
+}
