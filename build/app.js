@@ -9,8 +9,10 @@ Vue.use(VueRouter);
 
 // Vue components
 import store from './vue-components/store';
+import AppNav from './vue-components/partials/AppNav.vue';
 import HomeView from './vue-components/views/HomeView.vue';
 import LocationView from './vue-components/views/LocationView.vue';
+import RegisterView from './vue-components/views/RegisterView.vue';
 
 // navigation
 let $sidebar = $('.sidebar');
@@ -25,6 +27,7 @@ Vue.config.debug = true;
 Vue.config.devtools = true;
 
 var DocketApp = Vue.extend({
+  components: { AppNav },
   store
 });
 
@@ -38,6 +41,9 @@ router.map({
   },
   '/locations': {
     component: LocationView
+  },
+  '/register': {
+    component: RegisterView
   }
 });
 

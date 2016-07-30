@@ -5,11 +5,17 @@ import _ from 'lodash'
 Vue.use(Vuex)
 
 const state = {
-	thing: 'default value',
+	thing: 'lol',
     huts: [],
     tracks: [],
     hut: null,
-    track: null
+    track: null,
+	registered: false,
+	user: {
+		name: '',
+		email: '',
+		password: ''
+	}
 }
 
 const mutations = {
@@ -32,6 +38,12 @@ const mutations = {
 
     SELECT_TRACK(state, newvalue) {
         state.track = newvalue;
+    },
+    SET_USER(state, user) {
+    	state.user = user
+    },
+    SET_REGISTERED(state, value) {
+    	state.registered = value
     }
 }
 
