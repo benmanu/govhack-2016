@@ -15,10 +15,28 @@
         <div class="row">
             <ul class="nav sidebar__nav">
                 <li class="nav-item sidebar__nav-item">
-                    <a v-link="{ path: '/' }" class="nav-link sidebar__nav-link" href="#"><i class="material-icons material-icons--sm">home</i> Home</a>
+                    <a v-link="{ path: '/' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">home</i> Home</a>
                 </li>
                 <li class="nav-item sidebar__nav-item">
-                    <a v-link="{ path: '/locations' }" class="nav-link sidebar__nav-link" href="#"><i class="material-icons material-icons--sm">explore</i> Locations</a>
+                    <a v-link="{ path: '/locations' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">explore</i> Locations</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/huts-visited' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">store</i> Huts Visited</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/settings' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">settings</i> Settings</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/pending-transactions' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">payment</i> Payments</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/hut-search' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">search</i> Search</a>
                 </li>
             </ul>
         </div>

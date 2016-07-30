@@ -13,6 +13,11 @@ import AppNav from './vue-components/partials/AppNav.vue';
 import HomeView from './vue-components/views/HomeView.vue';
 import LocationView from './vue-components/views/LocationView.vue';
 import RegisterView from './vue-components/views/RegisterView.vue';
+import HutsVisitedView from './vue-components/views/HutsVisitedView.vue';
+import UserSettingsView from './vue-components/views/UserSettingsView.vue';
+import ReviewView from './vue-components/views/ReviewView.vue';
+import PendingTransactionsView from './vue-components/views/PendingTransactionsView.vue';
+import HutSearchView from './vue-components/views/HutSearchView.vue';
 
 // Routing and Vue setup
 Vue.config.debug = true;
@@ -20,7 +25,22 @@ Vue.config.devtools = true;
 
 var DocketApp = Vue.extend({
   components: { AppNav },
-  store
+  store,
+  methods: {
+    checkOnlineStatus() {
+      console.log("online");
+      // if (!navigator.onLine) {
+      //   this.$set('isOnline', false);
+      //   return;
+      // }
+    }
+  },
+  created() {
+    window.setInterval(() => {
+      // check status every 5 sec
+      this.checkOnlineStatus();
+    }, 5000);
+  }
 });
 
 var router = new VueRouter({
@@ -36,6 +56,21 @@ router.map({
   },
   '/register': {
     component: RegisterView
+  },
+  '/huts-visited': {
+    component: HutsVisitedView
+  },
+  '/settings': {
+    component: UserSettingsView
+  },
+  '/review': {
+    component: ReviewView
+  },
+  '/pending-transactions': {
+    component: PendingTransactionsView
+  },
+  '/hut-search': {
+    component: HutSearchView
   }
 });
 
