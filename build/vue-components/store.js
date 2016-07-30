@@ -8,8 +8,10 @@ const state = {
 	thing: 'lol',
     huts: [],
     tracks: [],
+    camps: [],
     hut: null,
     track: null,
+    camp: null,
 	registered: false,
 	user: {
 		name: '',
@@ -33,12 +35,19 @@ const mutations = {
         state.tracks.push(newvalue);
     },
 
+    ADD_CAMP(state, newvalue) {
+        state.camps.push(newvalue);
+    },
+
     SELECT_HUT(state, newvalue) {
         state.hut = newvalue;
     },
 
     SELECT_TRACK(state, newvalue) {
         state.track = newvalue;
+    },
+    SELECT_CAMP(state, newvalue) {
+        state.camp = newvalue;
     },
     SET_USER(state, user) {
     	state.user = user

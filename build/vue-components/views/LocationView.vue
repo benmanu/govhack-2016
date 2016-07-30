@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div v-else v-if="track" class="card-group">
+    <div v-if="track" class="card-group">
         <div class="card">
             <div class="card-block">
                 <h3 class="card-title card-title--has-status">{{track.properties.DESCRIPTION}}</h3>
@@ -63,6 +63,31 @@
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div v-if="camp" class="card-group">
+        <div class="card">
+            <div class="card-block">
+                <h3 class="card-title card-title--has-status">{{camp.properties.COMMON_NAME}}</h3>
+                <p class="card-text">{{camp.properties.FACILITY_TYPE}}</p>
+                <p class="card-text">{{camp.properties.STREET_ADDRESS}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <img class="card-img-w card-img-top" src="http://placehold.it/800x400" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+
+    <div class="m-b-2 m-t-2">
+        <p>
+            <em><small>Huts sourced from the <a href="https://koordinates.com/layer/3910-doc-huts/" target="_blank">koordinates</a> data service and licensed by koordinates for re-use under the Creative Commons Attribution 3.0 New Zealand licence.</small></em>
+            <br>
+            <em><small>Tracks sourced from the <a href="https://koordinates.com/layer/753-doc-tracks/" target="_blank">koordinates</a> data service and licensed by koordinates for re-use under the Creative Commons Attribution 3.0 New Zealand licence.</small></em>
+            <br>
+            <em><small>Camp sites sourced from the <a href="https://data.canterburymaps.govt.nz/layer/7469-canterbury-maps-camping-site/" target="_blank">Canterbury Maps</a> data service and licensed by Canterbury Maps for re-use under the Creative Commons Attribution 3.0 New Zealand licence.</small></em>
+        </p>
     </div>
 
 </template>
@@ -85,10 +110,6 @@
             // Perform actions of any kind
             bookmarkHut() {
                 this.bookmarkIcon = (this.bookmarkIcon === 'bookmark' ? 'bookmark_border' : 'bookmark');
-                console.log('<<<');
-                this.$nextTick(function () {
-                    console.log('>>>'); // => 'updated'
-                });
             }
         },
         created() {
@@ -163,50 +184,53 @@
 
             // on track click show details
             trackLayer.on('click', (l) => {
-                if (l.layer.feature.geometry !== void 0) {
+                if (l.layer.feature !== void 0) {
                     this.selectTrack(l.layer.feature);
                 }
             });
 
-            // // create the kml layer for christchurch camps
-            // let campLayer;
-            // campLayer = omnivore
-            //     .kml('/fixtures/canterbury-maps-camping-site.kml')
-            //     .on('ready', () => {
-            //         // don't re-add camps
-            //         if (this.camps.length > 0) {
-            //             return;
-            //         }
+            // create the kml layer for christchurch camps
+            let campLayer;
+            campLayer = omnivore
+                .kml('/fixtures/canterbury-maps-camping-site.kml')
+                .on('ready', () => {
+                    // don't re-add camps
+                    if (this.camps.length > 0) {
+                        return;
+                    }
 
-            //         // After the 'ready' event fires, the GeoJSON contents are accessible
-            //         // and you can iterate through layers.
-            //         campLayer.eachLayer((layer) => {
-            //             // add track to store
-            //             this.addTrack(layer.feature);
-            //         });
-            //     });
+                    // After the 'ready' event fires, the GeoJSON contents are accessible
+                    // and you can iterate through layers.
+                    campLayer.eachLayer((layer) => {
+                        // add track to store
+                        this.addCamp(layer.feature);
+                    });
+                });
 
-            // // on track click show details
-            // trackLayer.on('click', (l) => {
-            //     if (l.layer.feature.geometry !== void 0) {
-            //         this.selectTrack(l.layer.feature);
-            //     }
-            // });
+            // on track click show details
+            campLayer.on('click', (l) => {
+                if (l.layer.feature !== void 0) {
+                    this.selectCamp(l.layer.feature);
+                }
+            });
 
             // add the layer to the map
             this.map.addLayer(hutLayer);
             this.map.addLayer(trackLayer);
+            this.map.addLayer(campLayer);
 
             // add layer controls
             L.control.layers({}, {
                 'Huts': hutLayer,
-                'Tracks': trackLayer
+                'Tracks': trackLayer,
+                'Camps': campLayer
             }).addTo(this.map);
         },
         vuex: {
             getters: {
                 huts: state => state.huts,
                 tracks: state => state.tracks,
+                camps: state => state.camps,
                 hut: (state) => {
                     if (state.hut !== void 0 && state.hut) {
                         return state.hut;
@@ -217,6 +241,13 @@
                 track: (state) => {
                     if (state.track !== void 0 && state.track) {
                         return state.track;
+                    } else {
+                        return null;
+                    }
+                },
+                camp: (state) => {
+                    if (state.camp !== void 0 && state.camp) {
+                        return state.camp;
                     } else {
                         return null;
                     }
