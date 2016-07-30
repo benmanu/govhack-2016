@@ -14,14 +14,6 @@ import HomeView from './vue-components/views/HomeView.vue';
 import LocationView from './vue-components/views/LocationView.vue';
 import RegisterView from './vue-components/views/RegisterView.vue';
 
-// navigation
-let $sidebar = $('.sidebar');
-
-$('.js-sidebar-toggle').on('click', (e) => {
-    e.preventDefault();
-    $sidebar.toggleClass('sidebar--active');
-});
-
 // Routing and Vue setup
 Vue.config.debug = true;
 Vue.config.devtools = true;
@@ -48,3 +40,11 @@ router.map({
 });
 
 router.start(DocketApp, '.docket-app');
+
+// navigation
+let $sidebar = $('.sidebar');
+
+$('.js-sidebar-toggle').on('click', (e) => {
+    e.preventDefault();
+    $sidebar.toggleClass('sidebar--active');
+});

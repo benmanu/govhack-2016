@@ -27,7 +27,7 @@ coverage
 build/Release
 
 # Compiled codebase should not be committed
-/www/build/
+/www/dist/
 
 # Dependency directories
 node_modules
