@@ -15,7 +15,7 @@
         </div>
         <div class="card">
             <div class="card-block">
-                <h4 class="card-title">Facilities<span class="card-title__bookmark"><i class="material-icons material-icons--md">bookmark_border</i></span></h4>
+                <h4 class="card-title">Facilities<span class="card-title__bookmark"><i class="material-icons material-icons--md" v-on:click="bookmarkHut">{{bookmarkIcon}}</i></span></h4>
                 <div class="row">
                     <div class="col-xs-6">
                         <p>
@@ -76,12 +76,20 @@
         props: [],
         data() {
         	return {
-                map: false
+                map: false,
+                bookmarkIcon: 'bookmark_border'
             };
         },
         components: { },
         methods: {
-            //
+            // Perform actions of any kind
+            bookmarkHut() {
+                this.bookmarkIcon = (this.bookmarkIcon === 'bookmark' ? 'bookmark_border' : 'bookmark');
+                console.log('<<<');
+                this.$nextTick(function () {
+                    console.log('>>>'); // => 'updated'
+                });
+            }
         },
         created() {
             //
@@ -125,10 +133,20 @@
                 }
             });
 
-            // create the kml layer for doc huts
+            // create the kml layer for doc tracks
             let trackLayer;
+            let customTrackLayer = L.geoJson(null, {
+                // http://leafletjs.com/reference.html#geojson-style
+                style: function(feature) {
+                    return {
+                        color: '#c68257',
+                        opacity: 100,
+                        weight: 2
+                    };
+                }
+            });
             trackLayer = omnivore
-                .kml('/fixtures/doc-tracks.kml')
+                .kml('/fixtures/doc-tracks.kml', null, customTrackLayer)
                 .on('ready', () => {
                     // don't re-add tracks
                     if (this.tracks.length > 0) {
@@ -149,6 +167,31 @@
                     this.selectTrack(l.layer.feature);
                 }
             });
+
+            // // create the kml layer for christchurch camps
+            // let campLayer;
+            // campLayer = omnivore
+            //     .kml('/fixtures/canterbury-maps-camping-site.kml')
+            //     .on('ready', () => {
+            //         // don't re-add camps
+            //         if (this.camps.length > 0) {
+            //             return;
+            //         }
+
+            //         // After the 'ready' event fires, the GeoJSON contents are accessible
+            //         // and you can iterate through layers.
+            //         campLayer.eachLayer((layer) => {
+            //             // add track to store
+            //             this.addTrack(layer.feature);
+            //         });
+            //     });
+
+            // // on track click show details
+            // trackLayer.on('click', (l) => {
+            //     if (l.layer.feature.geometry !== void 0) {
+            //         this.selectTrack(l.layer.feature);
+            //     }
+            // });
 
             // add the layer to the map
             this.map.addLayer(hutLayer);
