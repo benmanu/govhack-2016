@@ -1,6 +1,16 @@
-# govhack-2016
+# Docket (govhack-2016)
 
-Using Koordinates (geospatial data), https://koordinates.com/layer/3910-doc-huts/.
+Uses the [Leaflet](http://leafletjs.com/) open-source JavaScript library for mobile-friendly interactive maps to display the geo-data.
+
+Icons sourced from [Googles material design](https://design.google.com/icons/) resources, available under the Apache License Version 2.0.
+
+## Attributions
+
+Huts sourced from the [koordinates](https://koordinates.com/layer/3910-doc-huts/) data service and licensed by koordinates for re-use under the Creative Commons Attribution 3.0 New Zealand licence.
+
+Tracks sourced from the [koordinates](https://koordinates.com/layer/753-doc-tracks/) data service and licensed by koordinates for re-use under the Creative Commons Attribution 3.0 New Zealand licence.
+
+Camp sites sourced from the [Canterbury Maps](https://data.canterburymaps.govt.nz/layer/7469-canterbury-maps-camping-site/) data service and licensed by Canterbury Maps for re-use under the Creative Commons Attribution 3.0 New Zealand licence.
 
 ## installation
 
