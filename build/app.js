@@ -13,6 +13,7 @@ import AppNav from './vue-components/partials/AppNav.vue';
 import HomeView from './vue-components/views/HomeView.vue';
 import LocationView from './vue-components/views/LocationView.vue';
 import RegisterView from './vue-components/views/RegisterView.vue';
+import HutsVisitedView from './vue-components/views/HutsVisitedView.vue';
 
 // Routing and Vue setup
 Vue.config.debug = true;
@@ -36,6 +37,9 @@ router.map({
   },
   '/register': {
     component: RegisterView
+  },
+  '/huts-visited': {
+    component: HutsVisitedView
   }
 });
 
