@@ -28,9 +28,9 @@
         },
         ready: function() {
             // create the base map
-            const lat = -41.0995128,
-                lng = 171.7986386,
-                zoom = 5;
+            const lat = -39.2727,
+                lng = 175.5802,
+                zoom = 9;
 
             this.map = L.map('map').setView([lat, lng], zoom);
             L.Icon.Default.imagePath = 'dist/images';
@@ -61,25 +61,33 @@
             });
 
             // create the kml layer for doc huts
-            // let trackLayer;
-            // trackLayer = omnivore
-            //     .kml('/fixtures/doc-tracks.kml')
-            //     .on('ready', () => {
-            //         // After the 'ready' event fires, the GeoJSON contents are accessible
-            //         // and you can iterate through layers.
-            //         trackLayer.eachLayer((layer) => {
-            //             // add track to store
-            //             this.addTrack(layer.feature);
-            //         });
-            //     });
+            let trackLayer;
+            trackLayer = omnivore
+                .kml('/fixtures/doc-tracks.kml')
+                .on('ready', () => {
+                    // After the 'ready' event fires, the GeoJSON contents are accessible
+                    // and you can iterate through layers.
+                    trackLayer.eachLayer((layer) => {
+                        // add track to store
+                        this.addTrack(layer.feature);
+                    });
+                });
+
+            // on track click show details
+            trackLayer.on('click', (l) => {
+                if (l.layer.feature.geometry !== void 0) {
+                    this.selectTrack(l.layer.feature);
+                }
+            });
 
             // add the layer to the map
             this.map.addLayer(hutLayer);
-            // this.map.addLayer(trackLayer);
+            this.map.addLayer(trackLayer);
 
             // add layer controls
             L.control.layers({}, {
-                'Huts': hutLayer
+                'Huts': hutLayer,
+                'Tracks': trackLayer
             }).addTo(this.map);
         },
         vuex: {
