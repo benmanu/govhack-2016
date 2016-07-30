@@ -7,6 +7,8 @@ Using Koordinates (geospatial data), https://koordinates.com/layer/3910-doc-huts
     $ npm install
     $ npm setup
 
+    $ bower install
+
 ## build tasks
 
     $ npm run build
