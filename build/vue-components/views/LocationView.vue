@@ -45,6 +45,11 @@
             hutLayer = omnivore
                 .kml('/fixtures/doc-huts.kml')
                 .on('ready', () => {
+                    // don't re-add tracks
+                    if (this.huts.length > 0) {
+                        return;
+                    }
+
                     // After the 'ready' event fires, the GeoJSON contents are accessible
                     // and you can iterate through layers to bind custom popups.
                     hutLayer.eachLayer((layer) => {
@@ -65,6 +70,11 @@
             trackLayer = omnivore
                 .kml('/fixtures/doc-tracks.kml')
                 .on('ready', () => {
+                    // don't re-add tracks
+                    if (this.tracks.length > 0) {
+                        return;
+                    }
+
                     // After the 'ready' event fires, the GeoJSON contents are accessible
                     // and you can iterate through layers.
                     trackLayer.eachLayer((layer) => {
