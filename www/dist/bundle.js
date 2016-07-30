@@ -937,14 +937,14 @@ exports.default = {
             zoom = 5;
 
         this.map = _leaflet2.default.map('map').setView([lat, lng], zoom);
-        _leaflet2.default.Icon.Default.imagePath = 'images/leaflet';
+        _leaflet2.default.Icon.Default.imagePath = 'dist/images';
 
         // add the tile layer
         _leaflet2.default.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
 
-        // add the kml layer for doc huts
+        // create the kml layer for doc huts
         var hutLayer = void 0;
         hutLayer = _leafletOmnivore2.default.kml('/fixtures/doc-huts.kml').on('ready', function () {
             // After the 'ready' event fires, the GeoJSON contents are accessible
@@ -957,6 +957,20 @@ exports.default = {
                 var content = '\n                            <p>\n                                Description: ' + props.DESCRIPTION + '\n                                <br>\n                                Status: ' + props.STATUS + '\n                            </p>\n                        ';
                 layer.bindPopup(content);
             });
+        });
+
+        // create the kml layer for doc huts
+        var trackLayer = void 0;
+        trackLayer = _leafletOmnivore2.default.kml('/fixtures/doc-tracks.kml');
+
+        // add the layer to the map
+        this.map.addLayer(hutLayer);
+        this.map.addLayer(trackLayer);
+
+        // add layer controls
+        _leaflet2.default.control.layers({}, {
+            'Huts': hutLayer,
+            'Tracks': trackLayer
         }).addTo(this.map);
     }
 };

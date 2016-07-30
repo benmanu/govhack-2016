@@ -27,14 +27,14 @@
                 zoom = 5;
 
             this.map = L.map('map').setView([lat, lng], zoom);
-            L.Icon.Default.imagePath = 'images/leaflet';
+            L.Icon.Default.imagePath = 'dist/images';
 
             // add the tile layer
             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(this.map);
 
-            // add the kml layer for doc huts
+            // create the kml layer for doc huts
             let hutLayer;
             hutLayer = omnivore
                 .kml('/fixtures/doc-huts.kml')
@@ -55,8 +55,22 @@
                         `;
                         layer.bindPopup(content);
                     });
-                })
-                .addTo(this.map);
+                });
+
+            // create the kml layer for doc huts
+            let trackLayer;
+            trackLayer = omnivore
+                .kml('/fixtures/doc-tracks.kml');
+
+            // add the layer to the map
+            this.map.addLayer(hutLayer);
+            this.map.addLayer(trackLayer);
+
+            // add layer controls
+            L.control.layers({}, {
+                'Huts': hutLayer,
+                'Tracks': trackLayer
+            }).addTo(this.map);
         }
     }
 </script>
