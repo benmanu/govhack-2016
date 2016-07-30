@@ -27,7 +27,8 @@ coverage
 build/Release
 
 # Compiled codebase should not be committed
-/www/dist/
+/www/dist/bundle.js
+/www/dist/bundle.css
 
 # Dependency directories
 node_modules
