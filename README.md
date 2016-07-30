@@ -16,6 +16,13 @@
     $ npm run css:watch
     $ npm run css:prod
 
+## ionic
+
+You can optionally build an iOS app from this source (requires Xcode):
+
+	$ npm install -g cordova ionic ios-sim
+	$ ionic emulate ios
+
 ## links
 
  - https://design.google.com/icons/
