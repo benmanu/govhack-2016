@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8" ?><kml xmlns="http://earth.google.com/kml/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://earth.google.com/kml/2.2 http://code.google.com/apis/kml/schema/kml22beta.xsd"><Document><name>Canterbury Maps - Camping Site</name>
+<description><![CDATA[
+<style>
+	.heading {
+		font-size: 12px;
+		font-weight: bold;
+	}
+</style>
+<base href="https://data.canterburymaps.govt.nz" />
+
+
+    <div class="heading">Description</div>
+    <hr>
+<p>Public camping sites in the Canterbury Region.</p>
+<p>Copyright statement: <a href="http://canterburymaps.co.nz/Portal/Home/Partners">canterburymaps.co.nz/Portal/Home/Partners</a></p>
+
+
+
+	<div class="heading">License</div>
+	<hr>
+	License: <a href="https://data.canterburymaps.govt.nz/license/attribution-3-0-new-zealand/" onclick="window.open('about:blank'); window.open(this.href); return false;">Creative Commons Attribution 3.0 New Zealand</a>
+
+
+<hr>
+
+
+
+<div class="footer">Source: <a href="https://data.canterburymaps.govt.nz/layer/7469-canterbury-maps-camping-site/" onclick="window.open('about:blank'); window.open(this.href); return false;">Canterbury Maps - Camping Site</a></div>
+<div class="footer">Data last updated: 02 Aug 2015</div>
+<div class="footer">Downloaded from <a href="https://data.canterburymaps.govt.nz" onclick="window.open('about:blank'); window.open(this.href); return false;">Canterbury Maps Data Service</a> on 30 Jul 2016</div>
+]]></description>
+<Placemark><name />
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED" />
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME" />
+<SimpleData name="SOURCE">Waimakariri District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2012-05-23 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED" />
+<SimpleData name="COMMON_NAME">Ashley Gorge Holiday Park</SimpleData>
+<SimpleData name="LINK">http://www.waimakariri.govt.nz/leisure_recreation/camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">2153345400</SimpleData>
+<SimpleData name="STREET_ADDRESS">697 Ashley Gorge Road, Oxford</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.226968,-43.229417</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Pleasant Point Domain Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Pleasant Point Domain Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Pleasant Point Domain Motor Camp</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">9</SimpleData>
+<SimpleData name="STREET_ADDRESS">Pleasant Point Highway, Pleasant Point</SimpleData>
+<SimpleData name="DESCRIPTION">Pleasant Point Domain Motor Camp</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.143586,-44.262493</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Temuka Holiday Park</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Temuka Holiday Park</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Temuka Holiday Park</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">10</SimpleData>
+<SimpleData name="STREET_ADDRESS">1 Fergusson Drive, Temuka</SimpleData>
+<SimpleData name="DESCRIPTION">Temuka Holiday Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.283043,-44.250847</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Peel Forest Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Peel Forest Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Peel Forest Motor Camp</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">11</SimpleData>
+<SimpleData name="STREET_ADDRESS">150 Rangitata Gorge Road, Peel Forest</SimpleData>
+<SimpleData name="DESCRIPTION">Peel Forest Motor Camp</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.266157,-43.889837</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Geraldine Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Geraldine Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Geraldine Motor Camp</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">12</SimpleData>
+<SimpleData name="STREET_ADDRESS">39 Hislop Street, Geraldine</SimpleData>
+<SimpleData name="DESCRIPTION">Geraldine Motor Camp</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.243549,-44.094222</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Grumpy's Retreat and Holiday Park</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Grumpy's Retreat and Holiday Park</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Grumpy's Retreat and Holiday Park</SimpleData>
+<SimpleData name="LINK">http://www.grumpysretreat.co.nz/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">13</SimpleData>
+<SimpleData name="STREET_ADDRESS">Cnr Keen Road and SH 79</SimpleData>
+<SimpleData name="DESCRIPTION">Grumpy's Retreat and Holiday Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.262581,-44.046278</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Timaru Top Ten Holiday Park</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Timaru Top Ten Holiday Park</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Timaru Top Ten Holiday Park</SimpleData>
+<SimpleData name="LINK">http://www.timaruholidaypark.co.nz/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">14</SimpleData>
+<SimpleData name="STREET_ADDRESS">154A Selwyn Street, Timaru</SimpleData>
+<SimpleData name="DESCRIPTION">Timaru Top Ten Holiday Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.231087,-44.384456</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Farmyard Holiday Park</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Farmyard Holiday Park</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Farmyard Holiday Park</SimpleData>
+<SimpleData name="LINK">http://www.thefarmyardholidaypark.co.nz/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">15</SimpleData>
+<SimpleData name="STREET_ADDRESS">Coach Road, Geraldine</SimpleData>
+<SimpleData name="DESCRIPTION">Farmyard Holiday Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.273244,-44.130731</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Glenmark Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Glenmark Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Glenmark Motor Camp</SimpleData>
+<SimpleData name="LINK">http://www.timarumotorcamp.co.nz/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">16</SimpleData>
+<SimpleData name="STREET_ADDRESS">30 Beaconsfield Road, Timaru</SimpleData>
+<SimpleData name="DESCRIPTION">Glenmark Holiday Camp</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.237247,-44.417654</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Winchester Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Winchester Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Winchester Camping Ground</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">17</SimpleData>
+<SimpleData name="STREET_ADDRESS">Temuka-Orari Highway, Winchester</SimpleData>
+<SimpleData name="DESCRIPTION">Winchester Camping Ground</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.278464,-44.192558</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Rangitata Reserve Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Rangitata Reserve Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Rangitata Reserve Motor Camp</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">18</SimpleData>
+<SimpleData name="STREET_ADDRESS">150 Rangitata Huts Road, Rangitata</SimpleData>
+<SimpleData name="DESCRIPTION">Rangitata Reserve Huts and Motor Camp</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.497212,-44.192318</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Te Moana Gorge Camping Area</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">19</SimpleData>
+<SimpleData name="STREET_ADDRESS">Te Moana Road</SimpleData>
+<SimpleData name="DESCRIPTION">Te Moana Gorge Camping Area</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.090594,-44.041355</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Te Moana Gorge Camping Area</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">20</SimpleData>
+<SimpleData name="STREET_ADDRESS">Te Moana Road</SimpleData>
+<SimpleData name="DESCRIPTION">Te Moana Gorge Camping Area</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.085257,-44.042285</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Te Moana Gorge Camping Area</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Te Moana Gorge Camping Area</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">21</SimpleData>
+<SimpleData name="STREET_ADDRESS">Te Moana Road</SimpleData>
+<SimpleData name="DESCRIPTION">Te Moana Gorge Camping Area</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.097432,-44.037852</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Orari Gorge Camp Site</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Orari Gorge Camp Site</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Orari Gorge Camp Site</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">22</SimpleData>
+<SimpleData name="STREET_ADDRESS">Yates Road, Orari Gorge</SimpleData>
+<SimpleData name="DESCRIPTION">Orari Gorge Camp Site</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.184044,-43.987669</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Waihi Gorge Camping Area</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Waihi Gorge Camping Area</SimpleData>
+<SimpleData name="SOURCE">Timaru District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-01 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-02-22 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Waihi Gorge Camping Area</SimpleData>
+<SimpleData name="LINK" />
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">23</SimpleData>
+<SimpleData name="STREET_ADDRESS">Waihi Gorge Road</SimpleData>
+<SimpleData name="DESCRIPTION">Waihi Gorge Camping Area</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 171.154840,-44.002698</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Amberley Beach Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Amberley Beach Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Amberley Beach Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/amberley-beach-camping-ground/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF28</SimpleData>
+<SimpleData name="STREET_ADDRESS">1 Chamberlain Avenue</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.777436,-43.174789</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Leithfield Beach Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Leithfield Beach Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Leithfield Beach Motor Camp</SimpleData>
+<SimpleData name="LINK">http://www.leithfieldbeachmotorcamp.co.nz/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF29</SimpleData>
+<SimpleData name="STREET_ADDRESS">18 Lucas Drive</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.754363,-43.210322</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Balmoral Recreation Reserve Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Balmoral Recreation Reserve Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Balmoral Recreation Reserve Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/balmoral-recreation-reserve-camping-ground/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF30</SimpleData>
+<SimpleData name="STREET_ADDRESS">15 Balmoral Station Road</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.770652,-42.866944</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Buxton Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Buxton Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Buxton Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/buxton-camping-ground/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF31</SimpleData>
+<SimpleData name="STREET_ADDRESS">707 Gore Bay Road</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 173.311854,-42.854316</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Culverden Domain Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Culverden Domain Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Culverden Domain Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/culverden-domain-camping-ground/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF32</SimpleData>
+<SimpleData name="STREET_ADDRESS">Mountainview Road</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.843909,-42.776209</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Gore Bay Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Gore Bay Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Gore Bay Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF33</SimpleData>
+<SimpleData name="STREET_ADDRESS">31 Moody Street</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 173.309005,-42.860181</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Hurunui River Mouth Reserve Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Hurunui River Mouth Reserve Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Hurunui River Mouth Reserve Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/hurunui-river-mouth-reserve-camping-ground/#Hurunui River Mouth</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF34</SimpleData>
+<SimpleData name="STREET_ADDRESS">727 Hurunui Mouth Road</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 173.279081,-42.910708</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Motunau Beach Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Motunau Beach Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Motunau Beach Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/motunau-beach-camping-ground/#Motunay Beach</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF35</SimpleData>
+<SimpleData name="STREET_ADDRESS">1a Lindsay Terrace</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 173.075536,-43.047461</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Waikari Camping Ground</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Waikari Camping Ground</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Waikari Camping Ground</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/waikari-reserve-camping-ground/#Waikari</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF36</SimpleData>
+<SimpleData name="STREET_ADDRESS">22 Princes Street</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.701017,-42.968800</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Pines Motor Camp</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Pines Motor Camp</SimpleData>
+<SimpleData name="SOURCE">Hurunui District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-06 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2012-04-17 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Pines Motor Camp</SimpleData>
+<SimpleData name="LINK">http://www.hurunui.govt.nz/services/community-facilities/camping-grounds-2/pines-motor-camp/#Hanmer</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">CF37</SimpleData>
+<SimpleData name="STREET_ADDRESS">Argelins Road</SimpleData>
+<SimpleData name="DESCRIPTION" />
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 172.820277,-42.520559</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Kaikoura Top Ten Holiday Park</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2013-03-06 16:12:19</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Kaikoura Top Ten Holiday Park</SimpleData>
+<SimpleData name="SOURCE">Kaikoura District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-02-22 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2013-03-06 16:12:12</SimpleData>
+<SimpleData name="COMMON_NAME">Kaikoura Top Ten Holiday Park</SimpleData>
+<SimpleData name="LINK">http://www.kaikoura.govt.nz</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">COM18</SimpleData>
+<SimpleData name="STREET_ADDRESS">Kaikoura</SimpleData>
+<SimpleData name="DESCRIPTION">Kaikoura Top Ten Holiday Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 173.679647,-42.395039</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Wildlife Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Wildlife Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Wildlife Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">WILDCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Loch Laird Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. SOUTH OF LOCH LAIRD RESERVE</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.187558,-44.588108</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Parsons Rock Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Parsons Rock Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Parsons Rock Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">PAROCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Otematata-kurow Rd Otematata</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. NORTHSIDE OF HIGHWAY BEFORE  OTEMATATA TOWNSHIP,BESIDE LAKE FRONTAGE,WESTSIDE OF PARSONS ROCK.</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.230452,-44.613919</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Sailors Cutting Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Sailors Cutting Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Sailors Cutting Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">SACUCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Omarama-otematata Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. 26050/08700, SECTIONS 3/4 BLK IV BENMORE SD -SAILORS CUTTING RECREATION RESERVE, NORTH SIDE OF ROAD BETWEEN OMARAMA AND OTEMATATA</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.087823,-44.546902</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Round Bush Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Round Bush Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Round Bush Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">ROBUCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Lake Ohau Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. 26050/03200, SEC 1 BLK II CAMPBELL S D-ROUND BUSH RECREATION RESERVE, NORTH OF LAKE OHAU VILLAGE.EASTSIDE OF ROAD</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 169.815872,-44.210333</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Ohau C Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Ohau C Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Ohau C Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">OHACCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Mcaughtries Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. SOUTH OF LAKE OHAU</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.193542,-44.347634</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Loch Laird Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Loch Laird Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Loch Laird Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">LOLACR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Loch Laird Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. NORTH OF TOWNSHIP ON SOUTH OF HYDRO DAM, BENMORE</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.182139,-44.576394</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Lake Middleton Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Lake Middleton Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Lake Middleton Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">LAMICR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Lake Ohau Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. 26050/12302, PT SEC 1 BLK VII CAMPBELL SD -PT LAKE MIDDLETON RECREATION RESERVE, AVOCA HOUSE  SITUATED AT THE NORTHEND OF RESERVE AND LEASED TO WAITAKI BOYS HIGH SCHOOL, SOUTH OF OHAU TOWNSHIP,REMOTE CAMPING RESERVE</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 169.848118,-44.274055</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Boat Harbour Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Boat Harbour Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Boat Harbour Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">BOHACR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Otematata-kurow Rd Otematata</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. OVER BRIDGE,NORTHSIDE OF HWY</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.201255,-44.603773</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Falstone Creek Rec Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Falstone Creek Rec Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Falstone Creek Rec Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">FALSCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Falston Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. 26050/14300, SEC 1 BLK XIII BENMORE SD -FALSTONE CREEK RECREATION RESERVE- SO 15900, EDGE OF LAKE BENMORE,SOUTHERN END OF FALSTON ROAD</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.202654,-44.399457</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Pumpkin Reserve</name>
+<styleUrl>#canterbury-maps-camping-siteId</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#canterbury-maps-camping-siteId"><SimpleData name="DATE_LAST_MODIFIED">2011-11-04 00:00:00</SimpleData>
+<SimpleData name="FEATURE_ACCURACY">+/- 10m (1:10,000)</SimpleData>
+<SimpleData name="SHORT_NAME">Pumpkin Reserve</SimpleData>
+<SimpleData name="SOURCE">Waitaki District Council</SimpleData>
+<SimpleData name="DATE_SUPPLIED">2013-03-18 00:00:00</SimpleData>
+<SimpleData name="DATE_CREATED">2010-09-08 00:00:00</SimpleData>
+<SimpleData name="COMMON_NAME">Pumpkin Reserve</SimpleData>
+<SimpleData name="LINK">http://www.waitaki.govt.nz/district/SitePages/Lakes%20and%20Camping.aspx</SimpleData>
+<SimpleData name="FACILITY_TYPE">Camping Site</SimpleData>
+<SimpleData name="ID">PUMPCR</SimpleData>
+<SimpleData name="STREET_ADDRESS">Omarama-otematata Rd Ahuriri</SimpleData>
+<SimpleData name="DESCRIPTION">Open Summer Only. PUMPKIN RECREATION RESERVE, NORTH SIDE OF ROAD BETWEEN OMARAMA AND OTEMATATA, APPROX 2.5 KMS NORTH OF SAILORS CUTTING RECREATION RESERVE - BUMP OF LAND BY LAKE IN FRONT OF SEC 6 SO 351678</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 170.068918,-44.532218</coordinates>
+</Point>
+</Placemark>
+<Schema id="canterbury-maps-camping-siteId" name="canterbury-maps-camping-site"><SimpleField name="DATE_LAST_MODIFIED" type="string"><displayName><![CDATA[DATE_LAST_MODIFIED]]></displayName>
+</SimpleField>
+<SimpleField name="FEATURE_ACCURACY" type="string"><displayName><![CDATA[FEATURE_ACCURACY]]></displayName>
+</SimpleField>
+<SimpleField name="SHORT_NAME" type="string"><displayName><![CDATA[SHORT_NAME]]></displayName>
+</SimpleField>
+<SimpleField name="SOURCE" type="string"><displayName><![CDATA[SOURCE]]></displayName>
+</SimpleField>
+<SimpleField name="DATE_SUPPLIED" type="string"><displayName><![CDATA[DATE_SUPPLIED]]></displayName>
+</SimpleField>
+<SimpleField name="DATE_CREATED" type="string"><displayName><![CDATA[DATE_CREATED]]></displayName>
+</SimpleField>
+<SimpleField name="COMMON_NAME" type="string"><displayName><![CDATA[COMMON_NAME]]></displayName>
+</SimpleField>
+<SimpleField name="LINK" type="string"><displayName><![CDATA[LINK]]></displayName>
+</SimpleField>
+<SimpleField name="FACILITY_TYPE" type="string"><displayName><![CDATA[FACILITY_TYPE]]></displayName>
+</SimpleField>
+<SimpleField name="ID" type="string"><displayName><![CDATA[ID]]></displayName>
+</SimpleField>
+<SimpleField name="STREET_ADDRESS" type="string"><displayName><![CDATA[STREET_ADDRESS]]></displayName>
+</SimpleField>
+<SimpleField name="DESCRIPTION" type="string"><displayName><![CDATA[DESCRIPTION]]></displayName>
+</SimpleField>
+</Schema>
+<Style id="canterbury-maps-camping-siteId"><IconStyle><color>ff00ffff</color>
+<scale>0.2</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/pal2/icon18.png</href>
+</Icon>
+</IconStyle>
+<LineStyle><color>ff00ffff</color>
+<width>2</width>
+</LineStyle>
+<PolyStyle><color>7f00ffff</color>
+</PolyStyle>
+<BalloonStyle><text><![CDATA[
+<html>
+<head>
+    <style type="text/css">
+        table {
+            width: 100%;
+            border-width: 1px 0 1px 0;
+            border-style: solid;
+            margin-bottom: 10px;
+        }
+
+        th, td {
+            text-align: left;
+        }
+
+        th {
+            width:auto;
+        }
+    </style>
+</head>
+<body>
+    <base href="https://data.canterburymaps.govt.nz" />
+
+    <h2>Canterbury Maps - Camping Site</h2>
+
+    <table>
+        <tbody>
+            
+                <tr><th>$[canterbury-maps-camping-site/DATE_LAST_MODIFIED/displayName]</th><td>$[canterbury-maps-camping-site/DATE_LAST_MODIFIED]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/DATE_SUPPLIED/displayName]</th><td>$[canterbury-maps-camping-site/DATE_SUPPLIED]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/SHORT_NAME/displayName]</th><td>$[canterbury-maps-camping-site/SHORT_NAME]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/FEATURE_ACCURACY/displayName]</th><td>$[canterbury-maps-camping-site/FEATURE_ACCURACY]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/FACILITY_TYPE/displayName]</th><td>$[canterbury-maps-camping-site/FACILITY_TYPE]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/SOURCE/displayName]</th><td>$[canterbury-maps-camping-site/SOURCE]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/LINK/displayName]</th><td>$[canterbury-maps-camping-site/LINK]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/COMMON_NAME/displayName]</th><td>$[canterbury-maps-camping-site/COMMON_NAME]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/DATE_CREATED/displayName]</th><td>$[canterbury-maps-camping-site/DATE_CREATED]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/ID/displayName]</th><td>$[canterbury-maps-camping-site/ID]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/STREET_ADDRESS/displayName]</th><td>$[canterbury-maps-camping-site/STREET_ADDRESS]</th></tr>
+            
+                <tr><th>$[canterbury-maps-camping-site/DESCRIPTION/displayName]</th><td>$[canterbury-maps-camping-site/DESCRIPTION]</th></tr>
+            
+        </tbody>
+    </table>
+
+    <div>Source: <a href="https://data.canterburymaps.govt.nz/layer/7469-canterbury-maps-camping-site/" onclick="window.open('about:blank'); window.open(this.href); return false;">Canterbury Maps - Camping Site</a></div>
+    
+        <div>License: <a href="https://data.canterburymaps.govt.nz/license/attribution-3-0-new-zealand/" onclick="window.open('about:blank'); window.open(this.href); return false;">Creative Commons Attribution 3.0 New Zealand</a></div>
+    
+    <div>Data last updated: 02 Aug 2015</div>
+    <div>Downloaded from <a href="https://data.canterburymaps.govt.nz" onclick="window.open('about:blank'); window.open(this.href); return false;">Canterbury Maps Data Service</a> on 30 Jul 2016</div>
+</body>
+</html>
+]]></text>
+</BalloonStyle>
+</Style>
+</Document>
+</kml>

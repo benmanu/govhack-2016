@@ -45,7 +45,25 @@
         </div>
     </div>
 
-    <div v-show="track">{{track}}</div>
+    <div v-else v-if="track" class="card-group">
+        <div class="card">
+            <div class="card-block">
+                <h3 class="card-title card-title--has-status">{{track.properties.DESCRIPTION}}</h3>
+                <p class="card-text">{{track.properties.OBJECT_TYPE_DESCRIPTION}}</p>
+            </div>
+            <img class="card-img-w" src="http://placehold.it/800x400" alt="Card image cap">
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Huts</h4>
+                <ul>
+                    <li>Lake Alabaster Hut</li>
+                    <li>Steele Creek Hut</li>
+                    <li>Great Walk Hut</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </template>
 <script>
@@ -108,38 +126,38 @@
             });
 
             // create the kml layer for doc huts
-            // let trackLayer;
-            // trackLayer = omnivore
-            //     .kml('/fixtures/doc-tracks.kml')
-            //     .on('ready', () => {
-            //         // don't re-add tracks
-            //         if (this.tracks.length > 0) {
-            //             return;
-            //         }
+            let trackLayer;
+            trackLayer = omnivore
+                .kml('/fixtures/doc-tracks.kml')
+                .on('ready', () => {
+                    // don't re-add tracks
+                    if (this.tracks.length > 0) {
+                        return;
+                    }
 
-            //         // After the 'ready' event fires, the GeoJSON contents are accessible
-            //         // and you can iterate through layers.
-            //         trackLayer.eachLayer((layer) => {
-            //             // add track to store
-            //             this.addTrack(layer.feature);
-            //         });
-            //     });
+                    // After the 'ready' event fires, the GeoJSON contents are accessible
+                    // and you can iterate through layers.
+                    trackLayer.eachLayer((layer) => {
+                        // add track to store
+                        this.addTrack(layer.feature);
+                    });
+                });
 
-            // // on track click show details
-            // trackLayer.on('click', (l) => {
-            //     if (l.layer.feature.geometry !== void 0) {
-            //         this.selectTrack(l.layer.feature);
-            //     }
-            // });
+            // on track click show details
+            trackLayer.on('click', (l) => {
+                if (l.layer.feature.geometry !== void 0) {
+                    this.selectTrack(l.layer.feature);
+                }
+            });
 
             // add the layer to the map
             this.map.addLayer(hutLayer);
-            // this.map.addLayer(trackLayer);
+            this.map.addLayer(trackLayer);
 
             // add layer controls
             L.control.layers({}, {
                 'Huts': hutLayer,
-                // 'Tracks': trackLayer
+                'Tracks': trackLayer
             }).addTo(this.map);
         },
         vuex: {
@@ -155,9 +173,7 @@
                 },
                 track: (state) => {
                     if (state.track !== void 0 && state.track) {
-                        return `
-                            Selected track: ${state.track.properties.DESCRIPTION}.
-                        `;
+                        return state.track;
                     } else {
                         return null;
                     }
