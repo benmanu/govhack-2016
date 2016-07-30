@@ -15,7 +15,8 @@ const state = {
 		name: '',
 		email: '',
 		password: ''
-	}
+	},
+	isOnline: true
 }
 
 const mutations = {

@@ -1,6 +1,26 @@
 <template>
+  <style>
+    .item.item-divider {
+      border-bottom: 2px solid black;
+    }
+    .item .badge {
+      margin-top: 10px;
+    }
+
+  </style>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <span class="label label-default" @click="setSearchType('today')">Today</span>
+      <span class="label label-default" @click="setSearchType('lastWeek')">Last week</span>
+      <span class="label label-default" @click="setSearchType('lastMonth')">Last month</span>
+    </div>
+    <div class="col">
+    </div>
+  </div>
   <div class="list card">
-    <div  v-for="hut in huts">
+    <div  v-for="hut in huts | customDateFilter searchType">
       <div class="item item-divider" @click="toggleDescription(hut.id)">
         <div class="row">
           <div class="col">
@@ -31,18 +51,18 @@
         </div>
         <div class="row">
           <div class="col">
-            <button class="button button-positive" @click="">
+            <button class="button button-positive" @click="navigateToReview()">
               Write a review
             </button>
           </div>
           <div class="col">
-            <button class="button button-positive" @click="">
+            <button class="button button-assertive" @click="reportProblem()">
               Report a problem
             </button>
           </div>
-          <div class="col">
-            <button class="button button-positive" @click="">
-              Sent to friend
+          <div class="col" v-show="hut.price && !hut.paid">
+            <button class="button button-balanced" @click="schedulePayment()">
+              <i class="material-icons material-icons--sm">payment</i>Pay 4 HUT
             </button>
           </div>
          </div>
@@ -57,12 +77,13 @@
         components: { },
         data() {
           return {
+            searchType: 'today',
             huts: [{
               'id': 1,
               'name': "Ball Hut",
               'region': "Cantrbury",
               'nationalPark': 'Aoraki/Mount Cook National Park',
-              'dateVisited': new Date(),
+              'dateVisited': new Date() - 20 * 24 * 60 * 60 * 1000,
               'price': 5,
               'paid': true
             }, {
@@ -70,7 +91,7 @@
               'name': "Bealey Spur Hut",
               'region': "Cantrbury",
               'nationalPark': "Arthur's Pass National Park",
-              'dateVisited': new Date(),
+              'dateVisited': new Date() - 2 * 24 * 60 * 60 * 1000,
               'price': null,
               'paid': true
             }, {
@@ -95,6 +116,20 @@
             toggleDescription(a) {
               let desc = document.getElementById('hut-description-' + a)
                 desc.style.display = desc.style.display === "none"? "block" : "none"
+            },
+            schedulePayment() {
+              alert('Your payment has been scheduled.');
+            },
+            navigateToReview() {
+              alert('Not implemented yet');
+            },
+            reportProblem() {
+              alert('Thanks for letting us know');
+            },
+            setSearchType(type) {
+              console.log(type);
+
+              this.$set('searchType', type);
             }
         },
         filters: {
@@ -103,6 +138,28 @@
           },
           money(money) {
             return money + "$";
+          },
+          customDateFilter(dates, searchType) {
+            // TODO: define today, week and month correctly, based on dates
+            switch (searchType) {
+              case 'today':
+                return dates.filter(date => {
+                  return date.dateVisited > new Date() - 1 * 24 * 60 * 60 * 1000;
+                })
+                break;
+              case 'lastWeek':
+              return dates.filter(date => {
+                return date.dateVisited > new Date() - 7 * 24 * 60 * 60 * 1000;
+              })
+                break;
+              case 'lastMonth':
+              return dates.filter(date => {
+                return date.dateVisited > new Date() - 31 * 24 * 60 * 60 * 1000;
+              })
+                break;
+              default:
+                return date;
+            }
           }
         },
         created() {

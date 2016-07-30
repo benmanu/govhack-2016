@@ -21,7 +21,18 @@ Vue.config.devtools = true;
 
 var DocketApp = Vue.extend({
   components: { AppNav },
-  store
+  store,
+  methods: {
+    checkOnlineStatus() {
+      if (!navigator.onLine) {
+        this.$set('isOnline', false);
+        return;
+      }
+    }
+  },
+  created() {
+    this.checkOnlineStatus();
+  }
 });
 
 var router = new VueRouter({
