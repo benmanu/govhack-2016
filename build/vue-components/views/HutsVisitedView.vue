@@ -12,6 +12,7 @@
     <div class="col">
     </div>
     <div class="col">
+      <span class="label label-default" @click="setSearchType('all')">All</span>
       <span class="label label-default" @click="setSearchType('today')">Today</span>
       <span class="label label-default" @click="setSearchType('lastWeek')">Last week</span>
       <span class="label label-default" @click="setSearchType('lastMonth')">Last month</span>
@@ -73,11 +74,12 @@
 <script>
     import * as actions from '../actions'
     import moment from '../../../bower_components/moment/src/moment'
+    import $ from 'jquery'
     export default {
         components: { },
         data() {
           return {
-            searchType: 'today',
+            searchType: 'all',
             huts: [{
               'id': 1,
               'name': "Ball Hut",
@@ -105,17 +107,25 @@
             }]
           }
         },
+        ready() {
+          //FIXME: enable when server is ready
+          // this.fetchHuts();
+        },
         methods: {
+          fetchHuts: function()
+            {
+                this.$http.get('/api/huts-visited', function(huts)
+                {
+                  console.log(huts)
+                    this.$set('huts', huts);
+                });
+            },
             // Perform actions of any kind
             moment(date) {
               return moment(date);
             },
-            toggleHutTab() {
-                console.log('toggle');
-            },
             toggleDescription(a) {
-              let desc = document.getElementById('hut-description-' + a)
-                desc.style.display = desc.style.display === "none"? "block" : "none"
+              $('#hut-description-' + a).toggle();
             },
             schedulePayment() {
               alert('Your payment has been scheduled.');
@@ -127,8 +137,6 @@
               alert('Thanks for letting us know');
             },
             setSearchType(type) {
-              console.log(type);
-
               this.$set('searchType', type);
             }
         },
@@ -158,7 +166,7 @@
               })
                 break;
               default:
-                return date;
+                return dates;
             }
           }
         },
