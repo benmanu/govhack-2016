@@ -52,14 +52,6 @@ _vue2.default.use(_vueRouter2.default);
 // Vue components
 
 
-// navigation
-var $sidebar = (0, _jQuery2.default)('.sidebar');
-
-(0, _jQuery2.default)('.js-sidebar-toggle').on('click', function (e) {
-  e.preventDefault();
-  $sidebar.toggleClass('sidebar--active');
-});
-
 // Routing and Vue setup
 _vue2.default.config.debug = true;
 _vue2.default.config.devtools = true;
@@ -86,6 +78,16 @@ router.map({
 });
 
 router.start(DocketApp, '.docket-app');
+
+// navigation
+var $sidebar = (0, _jQuery2.default)('.sidebar');
+var $content = (0, _jQuery2.default)('.content');
+
+(0, _jQuery2.default)('.js-sidebar-toggle').on('click', function (e) {
+  e.preventDefault();
+  $sidebar.toggleClass('sidebar--active');
+  $content.toggleClass('content--sidebar-active');
+});
 
 },{"./bootstrap/button":2,"./bootstrap/collapse":3,"./vue-components/partials/AppNav.vue":6,"./vue-components/store":7,"./vue-components/views/HomeView.vue":8,"./vue-components/views/LocationView.vue":9,"./vue-components/views/RegisterView.vue":10,"jQuery":16,"leaflet":18,"vue":27,"vue-router":26}],2:[function(require,module,exports){
 'use strict';
@@ -1034,9 +1036,9 @@ exports.default = {
         var _this = this;
 
         // create the base map
-        var lat = -41.0995128,
-            lng = 171.7986386,
-            zoom = 5;
+        var lat = -39.2727,
+            lng = 175.5802,
+            zoom = 9;
 
         this.map = _leaflet2.default.map('map').setView([lat, lng], zoom);
         _leaflet2.default.Icon.Default.imagePath = 'dist/images';
@@ -1049,6 +1051,11 @@ exports.default = {
         // create the kml layer for doc huts
         var hutLayer = void 0;
         hutLayer = _leafletOmnivore2.default.kml('/fixtures/doc-huts.kml').on('ready', function () {
+            // don't re-add tracks
+            if (_this.huts.length > 0) {
+                return;
+            }
+
             // After the 'ready' event fires, the GeoJSON contents are accessible
             // and you can iterate through layers to bind custom popups.
             hutLayer.eachLayer(function (layer) {
@@ -1069,6 +1076,11 @@ exports.default = {
         // trackLayer = omnivore
         //     .kml('/fixtures/doc-tracks.kml')
         //     .on('ready', () => {
+        //         // don't re-add tracks
+        //         if (this.tracks.length > 0) {
+        //             return;
+        //         }
+
         //         // After the 'ready' event fires, the GeoJSON contents are accessible
         //         // and you can iterate through layers.
         //         trackLayer.eachLayer((layer) => {
@@ -1076,6 +1088,13 @@ exports.default = {
         //             this.addTrack(layer.feature);
         //         });
         //     });
+
+        // // on track click show details
+        // trackLayer.on('click', (l) => {
+        //     if (l.layer.feature.geometry !== void 0) {
+        //         this.selectTrack(l.layer.feature);
+        //     }
+        // });
 
         // add the layer to the map
         this.map.addLayer(hutLayer);
@@ -1096,16 +1115,16 @@ exports.default = {
             },
             hut: function hut(state) {
                 if (state.hut !== void 0 && state.hut) {
-                    return '\n                            Selected hut: ' + state.hut.properties.DESCRIPTION + '.\n                            Status: ' + state.hut.properties.STATUS + '. \n                        ';
+                    return state.hut;
                 } else {
-                    return 'No hut selected';
+                    return null;
                 }
             },
             track: function track(state) {
                 if (state.track !== void 0 && state.track) {
                     return '\n                            Selected track: ' + state.track.properties.DESCRIPTION + '.\n                        ';
                 } else {
-                    return 'No track selected';
+                    return null;
                 }
             }
         },
@@ -1113,7 +1132,7 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\t<h1>Locations</h1>\n\t<div id=\"map\" class=\"map\"></div>\n    <p>Huts: {{huts.length}}</p>\n    <p>Tracks: {{tracks.length}}</p>\n    <p>{{hut}}</p>\n    <p>{{track}}</p>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\t<h1>Locations</h1>\n\n    <div id=\"map\" class=\"map\"></div>\n\n    <div v-if=\"hut\" class=\"card-group\">\n        <div class=\"card\">\n            <div class=\"card-block\">\n                <h3 class=\"card-title card-title--has-status\">{{hut.properties.DESCRIPTION}}<span class=\"card-title__status card-title__status--open\">{{hut.properties.STATUS}}</span></h3>\n                <p class=\"card-text\">Tararua Forest Park, Wellingon</p>\n                <p class=\"card-text\">{{hut.properties.OBJECT_TYPE_DESCRIPTION}}, {{hut.properties.DESCRIPTION}}</p>\n                <p class=\"card-text\">Track: North Head - Coastal Loop Track</p>\n            </div>\n            <img class=\"card-img-w\" src=\"http://placehold.it/800x400\" alt=\"Card image cap\">\n        </div>\n        <div class=\"card\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">Facilities<span class=\"card-title__bookmark\"><i class=\"material-icons material-icons--md\">bookmark_border</i></span></h4>\n                <div class=\"row\">\n                    <div class=\"col-xs-6\">\n                        <p>\n                            <i class=\"material-icons material-icons--md\">hotel</i>\n                            <i class=\"material-icons material-icons--md\">hotel</i>\n                        </p>\n                        <p>- 2 bunk beds</p>\n                    </div>\n                    <div class=\"col-xs-6\">\n                        <p><i class=\"material-icons material-icons--md\">airline_seat_flat</i></p>\n                        <p>- Mattresses</p>\n                    </div>\n                </div>\n                <h4 class=\"card-title\">Location</h4>\n                <p>\n                    NZTopo50 map sheet:<br>\n                    BP53 Grid/NZTM2000<br>\n                    coordinates:<br>\n                    {{hut.geometry.coordinates[0]}}, {{hut.geometry.coordinates[1]}}\n                </p>\n                <h4 class=\"card-title\">Approximate times from nearest huts</h4>\n                <p class=\"card-text\">\n                    Anderson Memorial Hut: 2 hr<br>\n                    Mid Waiohine Hut: 3 - 4 hr\n                </p>\n            </div>\n        </div>\n    </div>\n\n    <div v-show=\"track\">{{track}}</div>\n\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

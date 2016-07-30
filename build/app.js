@@ -43,8 +43,10 @@ router.start(DocketApp, '.docket-app');
 
 // navigation
 let $sidebar = $('.sidebar');
+let $content = $('.content');
 
 $('.js-sidebar-toggle').on('click', (e) => {
     e.preventDefault();
     $sidebar.toggleClass('sidebar--active');
+    $content.toggleClass('content--sidebar-active');
 });

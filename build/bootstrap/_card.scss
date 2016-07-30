@@ -17,6 +17,33 @@
 
 .card-title {
   margin-bottom: $card-spacer-y;
+
+  &--has-status {
+    margin-right: 70px
+  }
+}
+
+h4.card-title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.card-title__status {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+  @include button-variant-min($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+  &--open {
+    @include button-variant-min($btn-success-color, $btn-success-bg, $btn-success-border);
+  }
+}
+
+.card-title__bookmark {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  cursor: pointer;
 }
 
 .card-subtitle {
@@ -24,7 +51,7 @@
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.card-text {
   margin-bottom: 0;
 }
 
@@ -158,6 +185,10 @@
   bottom: 0;
   left: 0;
   padding: 1.25rem;
+}
+
+.card-img-w {
+  max-width: 100%;
 }
 
 

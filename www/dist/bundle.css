@@ -343,8 +343,7 @@ label,
 select,
 summary,
 textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation; }
+  touch-action: manipulation; }
 
 table {
   background-color: transparent; }
@@ -549,7 +548,6 @@ mark,
   background-color: #f7f7f9;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1406,21 +1404,6 @@ form input[type="email"] {
   form input[type="email"]:focus {
     border-color: #66afe9;
     outline: none; }
-  .form-control::-webkit-input-placeholder, form input[type="text"]::-webkit-input-placeholder,
-  form input[type="password"]::-webkit-input-placeholder,
-  form input[type="email"]::-webkit-input-placeholder {
-    color: #999;
-    opacity: 1; }
-  .form-control::-moz-placeholder, form input[type="text"]::-moz-placeholder,
-  form input[type="password"]::-moz-placeholder,
-  form input[type="email"]::-moz-placeholder {
-    color: #999;
-    opacity: 1; }
-  .form-control:-ms-input-placeholder, form input[type="text"]:-ms-input-placeholder,
-  form input[type="password"]:-ms-input-placeholder,
-  form input[type="email"]:-ms-input-placeholder {
-    color: #999;
-    opacity: 1; }
   .form-control::placeholder, form input[type="text"]::placeholder,
   form input[type="password"]::placeholder,
   form input[type="email"]::placeholder {
@@ -1843,10 +1826,7 @@ form button {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 1rem;
   font-size: 1rem;
@@ -2266,7 +2246,6 @@ input[type="button"].btn-block {
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity .15s linear;
   transition: opacity .15s linear; }
   .fade.in {
     opacity: 1; }
@@ -2280,11 +2259,8 @@ input[type="button"].btn-block {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: .35s;
-          transition-duration: .35s;
-  -webkit-transition-property: height;
+  transition-timing-function: ease;
+  transition-duration: .35s;
   transition-property: height; }
 
 .dropup,
@@ -2859,10 +2835,7 @@ form
   line-height: 1rem;
   color: #eee;
   text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   background-color: #eee;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2942,10 +2915,7 @@ form
   padding: .5rem 1rem;
   line-height: 1.5;
   color: #555;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: .25rem; }
@@ -3098,7 +3068,6 @@ form
   bottom: 0; }
 
 .navbar-sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1030;
@@ -3227,12 +3196,40 @@ form
 
 .card-title {
   margin-bottom: 0.75rem; }
+  .card-title--has-status {
+    margin-right: 70px; }
+
+h4.card-title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eceeef; }
+
+.card-title__status {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f; }
+  .card-title__status--open {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+
+.card-title__bookmark {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  cursor: pointer; }
 
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0; }
 
-.card-text:last-child {
+.card-text {
   margin-bottom: 0; }
 
 .card-link:hover {
@@ -3339,6 +3336,9 @@ form
   left: 0;
   padding: 1.25rem; }
 
+.card-img-w {
+  max-width: 100%; }
+
 .card-img-top {
   border-radius: 0.25rem 0.25rem 0 0; }
 
@@ -3391,12 +3391,8 @@ form
 
 @media (min-width: 544px) {
   .card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem; }
+    column-count: 3;
+    column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
       width: 100%; } }
@@ -3666,12 +3662,6 @@ a.label:focus, a.label:hover {
   .alert-danger .alert-link, form .message.bad .alert-link {
     color: #843534; }
 
-@-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0; }
-  to {
-    background-position: 0 0; } }
-
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0; }
@@ -3687,9 +3677,7 @@ a.label:focus, a.label:hover {
 .progress[value] {
   color: #0074d9;
   border: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
+  appearance: none; }
 
 .progress[value]::-webkit-progress-bar {
   background-color: #eee;
@@ -3728,7 +3716,6 @@ a.label:focus, a.label:hover {
     border-bottom-right-radius: 0.25rem; } }
 
 .progress-striped[value]::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
 
@@ -3738,21 +3725,18 @@ a.label:focus, a.label:hover {
 
 @media screen and (min-width: 0\0) {
   .progress-bar-striped {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem; } }
 
 .progress-animated[value]::-webkit-progress-value {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
-          animation: progress-bar-stripes 2s linear infinite; }
+  animation: progress-bar-stripes 2s linear infinite; }
 
 .progress-animated[value]::-moz-progress-bar {
   animation: progress-bar-stripes 2s linear infinite; }
 
 @media screen and (min-width: 0\0) {
   .progress-animated .progress-bar-striped {
-    -webkit-animation: progress-bar-stripes 2s linear infinite;
-            animation: progress-bar-stripes 2s linear infinite; } }
+    animation: progress-bar-stripes 2s linear infinite; } }
 
 .progress-success[value]::-webkit-progress-value {
   background-color: #5cb85c; }
@@ -4074,15 +4058,10 @@ button.close {
   outline: 0;
   -webkit-overflow-scrolling: touch; }
   .modal.fade .modal-dialog {
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-    -webkit-transform: translate(0, -25%);
-            transform: translate(0, -25%); }
+    transform: translate(0, -25%); }
   .modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
+    transform: translate(0, 0); }
 
 .modal-open .modal {
   overflow-x: hidden;
@@ -4371,33 +4350,24 @@ button.close {
   .carousel-inner > .carousel-item {
     position: relative;
     display: none;
-    -webkit-transition: .6s ease-in-out left;
     transition: .6s ease-in-out left; }
     .carousel-inner > .carousel-item > img,
     .carousel-inner > .carousel-item > a > img {
       line-height: 1; }
     @media all and (transform-3d), (-webkit-transform-3d) {
       .carousel-inner > .carousel-item {
-        -webkit-transition: -webkit-transform .6s ease-in-out;
-        transition: -webkit-transform .6s ease-in-out;
         transition: transform .6s ease-in-out;
-        transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-        -webkit-perspective: 1000px;
-                perspective: 1000px; }
+        backface-visibility: hidden;
+        perspective: 1000px; }
         .carousel-inner > .carousel-item.next, .carousel-inner > .carousel-item.active.right {
           left: 0;
-          -webkit-transform: translate3d(100%, 0, 0);
-                  transform: translate3d(100%, 0, 0); }
+          transform: translate3d(100%, 0, 0); }
         .carousel-inner > .carousel-item.prev, .carousel-inner > .carousel-item.active.left {
           left: 0;
-          -webkit-transform: translate3d(-100%, 0, 0);
-                  transform: translate3d(-100%, 0, 0); }
+          transform: translate3d(-100%, 0, 0); }
         .carousel-inner > .carousel-item.next.left, .carousel-inner > .carousel-item.prev.right, .carousel-inner > .carousel-item.active {
           left: 0;
-          -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0); } }
+          transform: translate3d(0, 0, 0); } }
   .carousel-inner > .active,
   .carousel-inner > .next,
   .carousel-inner > .prev {
@@ -4433,14 +4403,12 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5; }
   .carousel-control.left {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
   .carousel-control.right {
     right: 0;
     left: auto;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
@@ -5101,8 +5069,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga'; }
+  font-feature-settings: 'liga'; }
   .material-icons--xs {
     font-size: 14px; }
   .material-icons--sm {
@@ -5143,8 +5110,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .leaflet-marker-shadow {
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
   -webkit-user-drag: none; }
 
 .leaflet-marker-icon,
@@ -5160,8 +5126,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   max-width: 15000px !important; }
 
 .leaflet-tile {
-  -webkit-filter: inherit;
-          filter: inherit;
+  filter: inherit;
   visibility: hidden; }
 
 .leaflet-tile-loaded {
@@ -5250,6 +5215,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .leaflet-fade-anim .leaflet-popup {
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear; }
 
 .leaflet-fade-anim .leaflet-tile-loaded,
@@ -5258,14 +5225,16 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
   -webkit-transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
-  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1); }
+  -moz-transition: -moz-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
+  -o-transition: -o-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1); }
 
 .leaflet-zoom-anim .leaflet-tile,
 .leaflet-pan-anim .leaflet-tile,
 .leaflet-touching .leaflet-zoom-animated {
   -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
   transition: none; }
 
 .leaflet-zoom-anim .leaflet-zoom-hide {
@@ -5448,6 +5417,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-size: 11px;
   white-space: nowrap;
   overflow: hidden;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   background: #fff;
   background: rgba(255, 255, 255, 0.5); }
@@ -5500,6 +5470,9 @@ a.bg-danger:focus, a.bg-danger:hover {
   padding: 1px;
   margin: -10px auto 0;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .leaflet-popup-content-wrapper,
@@ -5559,7 +5532,15 @@ a.bg-danger:focus, a.bg-danger:hover {
   height: 48px; }
 
 .content {
-  margin-top: 0.5rem; }
+  margin-top: 0.5rem;
+  display: block;
+  position: fixed;
+  top: 48px;
+  bottom: 0px;
+  overflow-y: scroll; }
+  .content--sidebar-active {
+    position: relative;
+    top: 0px; }
 
 /*
 #Components
