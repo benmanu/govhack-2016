@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>govhack - 2016</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="dist/bundle.css" media="screen">
+
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+</head>
+<body class="docket-app platform-ios platform-cordova platform-webview">
+    <nav class="header navbar navbar-fixed-top navbar-dark bg-inverse">
+        <a class="navbar-brand" href="/">GovHack - 2016</a>
+
+        <a href="#" title="Menu" class="btn btn-primary pull-xs-right hidden-md-up js-sidebar-toggle">[M]</a>
+        <a href="#" title="Admin" class="btn btn-success pull-xs-right">Login</a>
+    </nav>
+
+    <div class="content-padding"></div>
+    <div class="sidebar col-md-3">
+        <div class="row">
+            <ul class="nav sidebar__nav">
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/' }" class="nav-link sidebar__nav-link" href="#"><i class="material-icons material-icons--sm">home</i> Home</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/locations' }" class="nav-link sidebar__nav-link" href="#"><i class="material-icons material-icons--sm">explore</i> Locations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content col-md-9 col-md-offset-3">
+        <router-view></router-view>
+    </div>
+
+    <script src="dist/bundle.js" type="text/javascript"></script>
+</body>
+</html>
