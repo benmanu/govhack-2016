@@ -158,7 +158,7 @@
             let trackLayer;
             let customTrackLayer = L.geoJson(null, {
                 // http://leafletjs.com/reference.html#geojson-style
-                style: function(feature) {
+                style: (feature) => {
                     return {
                         color: '#c68257',
                         opacity: 100,
@@ -216,8 +216,6 @@
 
             // add the layer to the map
             this.map.addLayer(hutLayer);
-            this.map.addLayer(trackLayer);
-            this.map.addLayer(campLayer);
 
             // add layer controls
             L.control.layers({}, {
