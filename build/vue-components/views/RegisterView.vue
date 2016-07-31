@@ -1,7 +1,7 @@
 <template>
     <h1>Register</h1>
     <p><em>This data is currently stored only in your browser, and is not shared with the Docket developers, the DoC, or anyone else. Feel free to use fake details anyway!</em></p>
-    
+
     <form v-on:submit.prevent>
         <h4>Contact Details</h4>
 
@@ -16,6 +16,16 @@
         <div class="form-group">
             <label for="password">Password</label>
             <input v-on:blur="updateField('password', $event)" type="password" name="password">
+        </div>
+        <h4>Emergency Contact</h4>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input v-on:blur="updateField('eContactName', $event)" type="text" name="e-contact-name">
+        </div>
+        <div class="form-group">
+            <label for="password">Phone Number</label>
+            <input v-on:blur="updateField('eContactNumber', $event)" type="text" name="eContactNumber">
         </div>
 
         <h4>Payment Details</h4>
@@ -53,6 +63,9 @@
                 name: '',
                 email: '',
                 password: '',
+
+                eContactName: '',
+                eContactNumber: '',
 
                 ccname: '',
                 ccnumber: '',

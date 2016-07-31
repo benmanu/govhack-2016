@@ -30,7 +30,7 @@
        </label>
     </li>
     <li class="item item-toggle">
-       Allow App write posts To Facebook
+       Allow App to write posts To Facebook
        <label class="toggle toggle-positive">
          <input type="checkbox">
          <div class="track">

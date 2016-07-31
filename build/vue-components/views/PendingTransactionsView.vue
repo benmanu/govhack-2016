@@ -17,15 +17,15 @@
           return {
             payments: [{
               "id": 1,
-              "details": "The hut",
+              "details": "Ball Hut",
               "amount": 5
             }, {
               "id": 2,
-              "details": "The hut2",
+              "details": "Bealey Spur Hut",
               "amount": 10
             }, {
               "id": 3,
-              "details": "The hut3",
+              "details": "Black Hill Hutt",
               "amount": 1
             }]
           }
