@@ -6121,6 +6121,10 @@ var _ReviewView = require('./vue-components/views/ReviewView.vue');
 
 var _ReviewView2 = _interopRequireDefault(_ReviewView);
 
+var _ReportAProblemView = require('./vue-components/views/ReportAProblemView.vue');
+
+var _ReportAProblemView2 = _interopRequireDefault(_ReportAProblemView);
+
 var _PendingTransactionsView = require('./vue-components/views/PendingTransactionsView.vue');
 
 var _PendingTransactionsView2 = _interopRequireDefault(_PendingTransactionsView);
@@ -6152,13 +6156,7 @@ var DocketApp = _vue2.default.extend({
   components: { AppNav: _AppNav2.default },
   store: _store2.default,
   methods: {
-    checkOnlineStatus: function checkOnlineStatus() {
-      console.log("online");
-      // if (!navigator.onLine) {
-      //   this.$set('isOnline', false);
-      //   return;
-      // }
-    }
+    checkOnlineStatus: function checkOnlineStatus() {}
   },
   created: function created() {
     var _this = this;
@@ -6176,7 +6174,7 @@ var router = new _vueRouter2.default({
 
 router.map({
   '/': {
-    component: _HomeView2.default
+    component: _HutSearchView2.default
   },
   '/locations': {
     component: _LocationView2.default
@@ -6190,8 +6188,11 @@ router.map({
   '/settings': {
     component: _UserSettingsView2.default
   },
-  '/review': {
+  '/review/:hutIndex': {
     component: _ReviewView2.default
+  },
+  '/report/:hutIndex': {
+    component: _ReportAProblemView2.default
   },
   '/pending-transactions': {
     component: _PendingTransactionsView2.default
@@ -6220,7 +6221,7 @@ var $content = (0, _jQuery2.default)('.content');
   $content.toggleClass('content--sidebar-active');
 });
 
-},{"./bootstrap/button":103,"./bootstrap/collapse":104,"./vue-components/partials/AppNav.vue":107,"./vue-components/store":108,"./vue-components/views/CheckInView.vue":109,"./vue-components/views/HomeView.vue":110,"./vue-components/views/HutSearchView.vue":118,"./vue-components/views/HutView.vue":111,"./vue-components/views/HutsVisitedView.vue":112,"./vue-components/views/LocationView.vue":113,"./vue-components/views/PendingTransactionsView.vue":114,"./vue-components/views/RegisterView.vue":115,"./vue-components/views/ReviewView.vue":116,"./vue-components/views/UserSettingsView.vue":117,"jQuery":124,"leaflet":126,"vue":135,"vue-router":134}],103:[function(require,module,exports){
+},{"./bootstrap/button":103,"./bootstrap/collapse":104,"./vue-components/partials/AppNav.vue":107,"./vue-components/store":108,"./vue-components/views/CheckInView.vue":109,"./vue-components/views/HomeView.vue":110,"./vue-components/views/HutSearchView.vue":119,"./vue-components/views/HutView.vue":111,"./vue-components/views/HutsVisitedView.vue":112,"./vue-components/views/LocationView.vue":113,"./vue-components/views/PendingTransactionsView.vue":114,"./vue-components/views/RegisterView.vue":115,"./vue-components/views/ReportAProblemView.vue":116,"./vue-components/views/ReviewView.vue":117,"./vue-components/views/UserSettingsView.vue":118,"jQuery":125,"leaflet":127,"vue":136,"vue-router":135}],103:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6405,7 +6406,7 @@ var Button = function ($) {
 
 exports.default = Button;
 
-},{"jquery":124}],104:[function(require,module,exports){
+},{"jquery":125}],104:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6789,7 +6790,7 @@ var Collapse = function ($) {
 
 exports.default = Collapse;
 
-},{"./util":105,"jquery":124}],105:[function(require,module,exports){
+},{"./util":105,"jquery":125}],105:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6951,7 +6952,7 @@ var Util = function ($) {
                       */
 exports.default = Util;
 
-},{"jquery":124}],106:[function(require,module,exports){
+},{"jquery":125}],106:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7025,7 +7026,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-619401fe", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":135,"vue-hot-reload-api":133}],108:[function(require,module,exports){
+},{"vue":136,"vue-hot-reload-api":134}],108:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7104,7 +7105,7 @@ exports.default = new _vuex2.default.Store({
     mutations: mutations
 });
 
-},{"lodash":127,"vue":135,"vuex":136}],109:[function(require,module,exports){
+},{"lodash":128,"vue":136,"vuex":137}],109:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7163,7 +7164,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-336b44d3", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],110:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],110:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7178,27 +7179,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 exports.default = {
     components: {},
-    methods: {
-        // Perform actions of any kind
-        callDoThing: function callDoThing() {
-            this.doThing('new value');
-        }
-    },
+    methods: {},
     created: function created() {
         // Do something when this view is instantiated
     },
 
     vuex: {
-        getters: {
-            thing: function thing(state) {
-                return state.thing;
-            }
-        },
+        getters: {},
         actions: actions
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1>Home</h1>\n<p>yo</p>\n<button @click=\"callDoThing()\">{{ thing }}</button>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"row home\">\n    <div class=\"col-xs-12\">\n        <img class=\"home__logo\" src=\"dist/images/brand.png\" alt=\"DOCKET Logo\">\n    </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -7209,7 +7201,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-0bff26b3", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],111:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],111:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7336,7 +7328,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-07fb1fe6", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"leaflet":126,"leaflet-omnivore":125,"lodash":127,"vue":135,"vue-hot-reload-api":133}],112:[function(require,module,exports){
+},{"../actions":106,"leaflet":127,"leaflet-omnivore":126,"lodash":128,"vue":136,"vue-hot-reload-api":134}],112:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7411,13 +7403,10 @@ exports.default = {
       (0, _jquery2.default)('#hut-description-' + a).toggle();
     },
     schedulePayment: function schedulePayment() {
-      alert('Your payment has been scheduled.');
-    },
-    navigateToReview: function navigateToReview() {
-      alert('Not implemented yet');
-    },
-    reportProblem: function reportProblem() {
-      alert('Thanks for letting us know');
+      if (confirm("Do you want to proceed with payment")) {
+        alert('Payment approved');
+        this.$router.go('/pending-transactions');
+      }
     },
     setSearchType: function setSearchType(type) {
       this.$set('searchType', type);
@@ -7467,7 +7456,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<style>\n  .item.item-divider {\n    border-bottom: 2px solid black;\n  }\n  .item .badge {\n    margin-top: 10px;\n  }\n  .label.label-default {\n    height: 20px;\n  }\n\n</style>\n<div class=\"row\">\n  <div class=\"col col-20\">\n  </div>\n  <div class=\"col\">\n    <span class=\"label label-default label-lg\" @click=\"setSearchType('all')\">All</span>\n    <span class=\"label label-default\" @click=\"setSearchType('today')\">Today</span>\n    <span class=\"label label-default\" @click=\"setSearchType('lastWeek')\">Last week</span>\n    <span class=\"label label-default\" @click=\"setSearchType('lastMonth')\">Last month</span>\n  </div>\n  <div class=\"col col-20\">\n  </div>\n</div>\n<div class=\"list card\">\n  <div v-for=\"hut in huts | customDateFilter searchType\">\n    <div class=\"item item-divider\" @click=\"toggleDescription(hut.id)\">\n      <div class=\"row\">\n        <div class=\"col\">\n          {{ hut.name }}\n          <div class=\"badge badge-assertive\" v-show=\"!hut.paid\"> unpaid </div>\n        </div>\n\n        <div class=\"col\">\n          {{ hut.dateVisited | date }}\n        </div>\n      </div>\n    </div>\n    <div class=\"item item-text-wrap\" id=\"hut-description-{{hut.id}}\" style=\"display: none;\">\n      <div class=\"row\">\n        <div class=\"col\">Region: </div>\n        <div class=\"col\"> {{ hut.region }} </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">Location: </div>\n        <div class=\"col\">{{ hut.nationalPark }}</div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">Price: </div>\n        <div class=\"col\">\n         <span v-if=\"hut.price\"> {{ hut.price | money  }} </span>\n         <span v-else=\"\"> free </span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">\n          <button class=\"button button-positive\" @click=\"navigateToReview()\">\n            Write a review\n          </button>\n        </div>\n        <div class=\"col\">\n          <button class=\"button button-assertive\" @click=\"reportProblem()\">\n            Report a problem\n          </button>\n        </div>\n        <div class=\"col\" v-show=\"hut.price &amp;&amp; !hut.paid\">\n          <button class=\"button button-balanced\" @click=\"schedulePayment()\">\n            <i class=\"material-icons material-icons--sm\">payment</i>Pay 4 HUT\n          </button>\n        </div>\n       </div>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<style>\n  .item.item-divider {\n    border-bottom: 2px solid black;\n  }\n  .item .badge {\n    margin-top: 10px;\n  }\n  .label.label-default {\n    height: 20px;\n  }\n\n</style>\n<div class=\"row\">\n  <div class=\"col col-20\">\n  </div>\n  <div class=\"col\">\n    <span class=\"label label-default label-lg\" @click=\"setSearchType('all')\">All</span>\n    <span class=\"label label-default\" @click=\"setSearchType('today')\">Today</span>\n    <span class=\"label label-default\" @click=\"setSearchType('lastWeek')\">Last week</span>\n    <span class=\"label label-default\" @click=\"setSearchType('lastMonth')\">Last month</span>\n  </div>\n  <div class=\"col col-20\">\n  </div>\n</div>\n<div class=\"list card\">\n  <div v-for=\"hut in huts | customDateFilter searchType\">\n    <div class=\"item item-divider\" @click=\"toggleDescription(hut.id)\">\n      <div class=\"row\">\n        <div class=\"col\">\n          {{ hut.name }}\n          <div class=\"badge badge-assertive\" v-show=\"!hut.paid\"> unpaid </div>\n        </div>\n\n        <div class=\"col\">\n          {{ hut.dateVisited | date }}\n        </div>\n      </div>\n    </div>\n    <div class=\"item item-text-wrap\" id=\"hut-description-{{hut.id}}\" style=\"display: none;\">\n      <div class=\"row\">\n        <div class=\"col\">Region: </div>\n        <div class=\"col\"> {{ hut.region }} </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">Location: </div>\n        <div class=\"col\">{{ hut.nationalPark }}</div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">Price: </div>\n        <div class=\"col\">\n         <span v-if=\"hut.price\"> {{ hut.price | money  }} </span>\n         <span v-else=\"\"> free </span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">\n          <a v-link=\"{ path: '/review/' + $index }\" class=\"button button-positive\">\n            Write a review\n          </a>\n        </div>\n        <div class=\"col\">\n          <a v-link=\"{ path: '/report/' + $index }\" class=\"button button-assertive\">\n            Report a problem\n          </a>\n        </div>\n        <div class=\"col\" v-show=\"hut.price &amp;&amp; !hut.paid\">\n          <button class=\"button button-balanced\" @click=\"schedulePayment()\">\n            <i class=\"material-icons material-icons--sm\">payment</i>Pay 4 HUT\n          </button>\n        </div>\n       </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -7478,7 +7467,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-10110c44", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../../../bower_components/moment/src/moment":101,"../actions":106,"jquery":124,"vue":135,"vue-hot-reload-api":133}],113:[function(require,module,exports){
+},{"../../../bower_components/moment/src/moment":101,"../actions":106,"jquery":125,"vue":136,"vue-hot-reload-api":134}],113:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7622,8 +7611,6 @@ exports.default = {
 
         // add the layer to the map
         this.map.addLayer(hutLayer);
-        this.map.addLayer(trackLayer);
-        this.map.addLayer(campLayer);
 
         // add layer controls
         _leaflet2.default.control.layers({}, {
@@ -7680,7 +7667,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-88166fee", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"leaflet":126,"leaflet-omnivore":125,"lodash":127,"vue":135,"vue-hot-reload-api":133}],114:[function(require,module,exports){
+},{"../actions":106,"leaflet":127,"leaflet-omnivore":126,"lodash":128,"vue":136,"vue-hot-reload-api":134}],114:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7744,7 +7731,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-75eed092", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],115:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],115:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7815,11 +7802,11 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-ba9aee12", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],116:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],116:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _actions = require('../actions');
@@ -7829,39 +7816,130 @@ var actions = _interopRequireWildcard(_actions);
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 exports.default = {
-  components: {},
-  data: function data() {
-    return {
-      // FIXME: pass parameter
-      hut: {
-        'name': "Ball Hut",
-        'region': "Cantrbury",
-        'nationalPark': 'Aoraki/Mount Cook National Park',
-        'dateVisited': new Date() - 20 * 24 * 60 * 60 * 1000,
-        'price': 5,
-        'paid': true
-      }
+    components: {},
+    data: function data() {
+        return {
+            reportSubmited: false,
+            hut: {
+                'name': "Ball Hut",
+                'region': "Cantrbury",
+                'nationalPark': 'Aoraki/Mount Cook National Park',
+                'dateVisited': new Date() - 20 * 24 * 60 * 60 * 1000,
+                'price': 5,
+                'paid': true
+            }
 
-    };
-  },
+        };
+    },
 
-  methods: {
-    // Perform actions of any kind
-    submitReview: function submitReview() {
-      alert('Thank you for the Review');
+    methods: {
+        // Perform actions of any kind
+        submitReport: function submitReport() {
+            this.$set('reportSubmited', true);
+        }
+    },
+    ready: function ready() {
+        var hutIndex = this.$route.params.hutIndex;
+        if (hutIndex !== void 0) {
+            this.getHut(hutIndex);
+        }
+    },
+    created: function created() {
+        // Do something when this view is instantiated
+    },
+
+    vuex: {
+        getters: {
+            huts: function huts(state) {
+                return state.huts;
+            },
+            hut: function hut(state) {
+                if (state.hut !== void 0 && state.hut) {
+                    return state.hut;
+                } else {
+                    return null;
+                }
+            }
+        },
+        actions: actions
     }
-  },
-  created: function created() {
-    // Do something when this view is instantiated
-  },
-
-  vuex: {
-    getters: {},
-    actions: actions
-  }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<form v-on:submit.prevent=\"\">\n  <h1>Submit a review</h1>\n  <div class=\"row\">\n    <div class=\"col\">\n      <h4> Hut: {{ hut.name }} </h4></div>\n    <div class=\"col\"> </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"review\">Review:</label>\n    <textarea class=\"form-control\" rows=\"5\" id=\"review\"></textarea>\n  </div>\n  <div class=\"row\">\n    <div class=\"col col-90\"></div>\n    <div class=\"col\">\n      <button class=\"btn btn-primary\" @click=\"submitReview()\">Submit</button>\n    </div>\n  </div>\n</form>\n\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<form v-on:submit.prevent=\"\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <h4> {{ hut.name }} </h4></div>\n    <div class=\"col\"> </div>\n  </div>\n  <div class=\"form-group\" v-show=\"!reportSubmited\">\n    <label for=\"report\">What went wrong? :</label>\n    <textarea class=\"form-control\" rows=\"5\" id=\"report\"></textarea>\n  </div>\n  <div class=\"row\" v-show=\"reportSubmited\">\n    <div class=\"col\">\n      <p>Your report has been submited</p>\n    </div>\n  </div>\n  <div class=\"row\" v-show=\"!reportSubmited\">\n    <div class=\"col col-90\"></div>\n    <div class=\"col\">\n      <button class=\"btn btn-primary\" @click=\"submitReport()\">Submit</button>\n    </div>\n  </div>\n</form>\n\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  if (!module.hot.data) {
+    hotAPI.createRecord("_v-3f61e666", module.exports)
+  } else {
+    hotAPI.update("_v-3f61e666", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],117:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _actions = require('../actions');
+
+var actions = _interopRequireWildcard(_actions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = {
+    components: {},
+    data: function data() {
+        return {
+            reviewSubmited: false,
+            hut: {
+                'name': "Ball Hut",
+                'region': "Cantrbury",
+                'nationalPark': 'Aoraki/Mount Cook National Park',
+                'dateVisited': new Date() - 20 * 24 * 60 * 60 * 1000,
+                'price': 5,
+                'paid': true
+            }
+
+        };
+    },
+
+    methods: {
+        // Perform actions of any kind
+        submitReview: function submitReview() {
+            this.$set('reviewSubmited', true);
+        }
+    },
+    ready: function ready() {
+        var hutIndex = this.$route.params.hutIndex;
+        if (hutIndex !== void 0) {
+            this.getHut(hutIndex);
+        }
+    },
+    created: function created() {
+        // Do something when this view is instantiated
+    },
+
+    vuex: {
+        getters: {
+            huts: function huts(state) {
+                return state.huts;
+            },
+            hut: function hut(state) {
+                if (state.hut !== void 0 && state.hut) {
+                    return state.hut;
+                } else {
+                    return null;
+                }
+            }
+        },
+        actions: actions
+    }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<form v-on:submit.prevent=\"\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <h4>Review the {{ hut.name }} </h4></div>\n    <div class=\"col\"> </div>\n  </div>\n  <div class=\"form-group\" v-show=\"!reviewSubmited\">\n    <label for=\"review\">Review:</label>\n    <textarea class=\"form-control\" rows=\"5\" id=\"review\"></textarea>\n  </div>\n  <div class=\"row\" v-show=\"reviewSubmited\">\n    <div class=\"col\">\n      <p>Thank you for the review.</p>\n    </div>\n  </div>\n  <div class=\"row\" v-show=\"!reviewSubmited\">\n    <div class=\"col col-90\"></div>\n    <div class=\"col\">\n      <button class=\"btn btn-primary\" @click=\"submitReview()\">Submit</button>\n    </div>\n  </div>\n</form>\n\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -7872,7 +7950,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-1b8e0328", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],117:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],118:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7918,7 +7996,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-25a4863c", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"vue":135,"vue-hot-reload-api":133}],118:[function(require,module,exports){
+},{"../actions":106,"vue":136,"vue-hot-reload-api":134}],119:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7936,6 +8014,10 @@ var _leafletOmnivore2 = _interopRequireDefault(_leafletOmnivore);
 var _actions = require('../actions');
 
 var actions = _interopRequireWildcard(_actions);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -8004,6 +8086,9 @@ exports.default = {
   vuex: {
     getters: {
       huts: function huts(state) {
+        state.huts.forEach(function (hut) {
+          hut.properties['region'] = "Canterbury";
+        });
         return state.huts;
       }
     },
@@ -8011,7 +8096,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1>Search</h1>\n<div class=\"list\">\n  <label class=\"item item-input item-select\">\n    <div class=\"input-label\">\n      Region\n    </div>\n    <select v-on:change=\"updateSearchValues('region', $event)\">\n      <option></option>\n      <option v-for=\"region in regions\"> {{ region.name }}</option>\n    </select>\n  </label>\n  <label class=\"item item-input item-select\">\n    <div class=\"input-label\">\n      Park\n    </div>\n    <select v-on:change=\"updateSearchValues('np', $event)\">\n      <option></option>\n      <option v-for=\"np in nps\"> {{ np.name }}</option>\n    </select>\n  </label>\n  <label class=\"item item-input\">\n    <input type=\"text\" placeholder=\"Hut Name\" v-on:blur=\"updateSearchValues('name', $event)\">\n  </label>\n</div>\n<ul class=\"list\">\n  <li class=\"item\" v-for=\"hut in huts | customSearch search\">\n    <div class=\"row\">\n      <div class=\"col\"><em>Region</em></div>\n      <div class=\"col\">{{ hut.properties.DESCRIPTION }}</div>\n      <div class=\"col\">{{ hut.properties.OBJECT_TYPE_DESCRIPTION }}</div>\n      <div class=\"col\">\n        <a v-link=\"{ path: '/hut/' + $index }\">\n          <i class=\"material-icons\">keyboard_arrow_right</i>\n        </a>\n      </div>\n    </div>\n  </li>\n</ul>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1>Search</h1>\n<div class=\"list\">\n  <label class=\"item item-input item-select\">\n    <div class=\"input-label\">\n      Region\n    </div>\n    <select v-on:change=\"updateSearchValues('region', $event)\">\n      <option></option>\n      <option v-for=\"region in regions\"> {{ region.name }}</option>\n    </select>\n  </label>\n  <label class=\"item item-input item-select\">\n    <div class=\"input-label\">\n      Park\n    </div>\n    <select v-on:change=\"updateSearchValues('np', $event)\">\n      <option></option>\n      <option v-for=\"np in nps\"> {{ np.name }}</option>\n    </select>\n  </label>\n  <label class=\"item item-input\">\n    <input type=\"text\" placeholder=\"Hut Name\" v-on:blur=\"updateSearchValues('name', $event)\">\n  </label>\n</div>\n<ul class=\"list\">\n  <li class=\"item\" v-for=\"hut in huts | customSearch search\">\n    <div class=\"row\">\n      <div class=\"col\"> {{ hut.properties.region }}</div>\n      <div class=\"col\">{{ hut.properties.DESCRIPTION }}</div>\n      <div class=\"col\">{{ hut.properties.OBJECT_TYPE_DESCRIPTION }}</div>\n      <div class=\"col\">\n        <a v-link=\"{ path: '/hut/' + $index }\">\n          <i class=\"material-icons\">keyboard_arrow_right</i>\n        </a>\n      </div>\n    </div>\n  </li>\n</ul>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -8022,11 +8107,11 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-41f85456", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../actions":106,"leaflet":126,"leaflet-omnivore":125,"vue":135,"vue-hot-reload-api":133}],119:[function(require,module,exports){
+},{"../actions":106,"leaflet":127,"leaflet-omnivore":126,"lodash":128,"vue":136,"vue-hot-reload-api":134}],120:[function(require,module,exports){
 
-},{}],120:[function(require,module,exports){
-arguments[4][119][0].apply(exports,arguments)
-},{"dup":119}],121:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
+arguments[4][120][0].apply(exports,arguments)
+},{"dup":120}],122:[function(require,module,exports){
 function corslite(url, callback, cors) {
     var sent = false;
 
@@ -8121,7 +8206,7 @@ function corslite(url, callback, cors) {
 
 if (typeof module !== 'undefined') module.exports = corslite;
 
-},{}],122:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 var dsv = require('dsv'),
     sexagesimal = require('sexagesimal');
 
@@ -8308,12 +8393,12 @@ module.exports = {
     toPolygon: toPolygon
 };
 
-},{"dsv":123,"sexagesimal":130}],123:[function(require,module,exports){
+},{"dsv":124,"sexagesimal":131}],124:[function(require,module,exports){
 var fs = require("fs");
 
 module.exports = new Function("dsv.version = \"0.0.3\";\n\ndsv.tsv = dsv(\"\\t\");\ndsv.csv = dsv(\",\");\n\nfunction dsv(delimiter) {\n  var dsv = {},\n      reFormat = new RegExp(\"[\\\"\" + delimiter + \"\\n]\"),\n      delimiterCode = delimiter.charCodeAt(0);\n\n  dsv.parse = function(text, f) {\n    var o;\n    return dsv.parseRows(text, function(row, i) {\n      if (o) return o(row, i - 1);\n      var a = new Function(\"d\", \"return {\" + row.map(function(name, i) {\n        return JSON.stringify(name) + \": d[\" + i + \"]\";\n      }).join(\",\") + \"}\");\n      o = f ? function(row, i) { return f(a(row), i); } : a;\n    });\n  };\n\n  dsv.parseRows = function(text, f) {\n    var EOL = {}, // sentinel value for end-of-line\n        EOF = {}, // sentinel value for end-of-file\n        rows = [], // output rows\n        N = text.length,\n        I = 0, // current character index\n        n = 0, // the current line number\n        t, // the current token\n        eol; // is the current token followed by EOL?\n\n    function token() {\n      if (I >= N) return EOF; // special case: end of file\n      if (eol) return eol = false, EOL; // special case: end of line\n\n      // special case: quotes\n      var j = I;\n      if (text.charCodeAt(j) === 34) {\n        var i = j;\n        while (i++ < N) {\n          if (text.charCodeAt(i) === 34) {\n            if (text.charCodeAt(i + 1) !== 34) break;\n            ++i;\n          }\n        }\n        I = i + 2;\n        var c = text.charCodeAt(i + 1);\n        if (c === 13) {\n          eol = true;\n          if (text.charCodeAt(i + 2) === 10) ++I;\n        } else if (c === 10) {\n          eol = true;\n        }\n        return text.substring(j + 1, i).replace(/\"\"/g, \"\\\"\");\n      }\n\n      // common case: find next delimiter or newline\n      while (I < N) {\n        var c = text.charCodeAt(I++), k = 1;\n        if (c === 10) eol = true; // \\n\n        else if (c === 13) { eol = true; if (text.charCodeAt(I) === 10) ++I, ++k; } // \\r|\\r\\n\n        else if (c !== delimiterCode) continue;\n        return text.substring(j, I - k);\n      }\n\n      // special case: last token before EOF\n      return text.substring(j);\n    }\n\n    while ((t = token()) !== EOF) {\n      var a = [];\n      while (t !== EOL && t !== EOF) {\n        a.push(t);\n        t = token();\n      }\n      if (f && !(a = f(a, n++))) continue;\n      rows.push(a);\n    }\n\n    return rows;\n  };\n\n  dsv.format = function(rows) {\n    if (Array.isArray(rows[0])) return dsv.formatRows(rows); // deprecated; use formatRows\n    var fieldSet = {}, fields = [];\n\n    // Compute unique fields in order of discovery.\n    rows.forEach(function(row) {\n      for (var field in row) {\n        if (!(field in fieldSet)) {\n          fields.push(fieldSet[field] = field);\n        }\n      }\n    });\n\n    return [fields.map(formatValue).join(delimiter)].concat(rows.map(function(row) {\n      return fields.map(function(field) {\n        return formatValue(row[field]);\n      }).join(delimiter);\n    })).join(\"\\n\");\n  };\n\n  dsv.formatRows = function(rows) {\n    return rows.map(formatRow).join(\"\\n\");\n  };\n\n  function formatRow(row) {\n    return row.map(formatValue).join(delimiter);\n  }\n\n  function formatValue(text) {\n    return reFormat.test(text) ? \"\\\"\" + text.replace(/\\\"/g, \"\\\"\\\"\") + \"\\\"\" : text;\n  }\n\n  return dsv;\n}\n" + ";return dsv")();
 
-},{"fs":120}],124:[function(require,module,exports){
+},{"fs":121}],125:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -18389,7 +18474,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],125:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 var xhr = require('corslite'),
     csv2geojson = require('csv2geojson'),
     wellknown = require('wellknown'),
@@ -18646,7 +18731,7 @@ function parseXML(str) {
     }
 }
 
-},{"corslite":121,"csv2geojson":122,"polyline":128,"togeojson":131,"topojson/topojson.js":132,"wellknown":137}],126:[function(require,module,exports){
+},{"corslite":122,"csv2geojson":123,"polyline":129,"togeojson":132,"topojson/topojson.js":133,"wellknown":138}],127:[function(require,module,exports){
 /*
  Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
  (c) 2010-2013, Vladimir Agafonkin
@@ -27815,7 +27900,7 @@ L.Map.include({
 
 
 }(window, document));
-},{}],127:[function(require,module,exports){
+},{}],128:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -44426,7 +44511,7 @@ L.Map.include({
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],128:[function(require,module,exports){
+},{}],129:[function(require,module,exports){
 var polyline = {};
 
 // Based off of [the offical Google document](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)
@@ -44517,7 +44602,7 @@ polyline.encode = function(coordinates, precision) {
 
 if (typeof module !== undefined) module.exports = polyline;
 
-},{}],129:[function(require,module,exports){
+},{}],130:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -44638,7 +44723,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],130:[function(require,module,exports){
+},{}],131:[function(require,module,exports){
 module.exports = function(x, dims) {
     if (!dims) dims = 'NSEW';
     if (typeof x !== 'string') return null;
@@ -44652,7 +44737,7 @@ module.exports = function(x, dims) {
         ((m[4] && m[4] === 'S' || m[4] === 'W') ? -1 : 1);
 };
 
-},{}],131:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 (function (process){
 toGeoJSON = (function() {
     'use strict';
@@ -44989,7 +45074,7 @@ toGeoJSON = (function() {
 if (typeof module !== 'undefined') module.exports = toGeoJSON;
 
 }).call(this,require('_process'))
-},{"_process":129,"xmldom":119}],132:[function(require,module,exports){
+},{"_process":130,"xmldom":120}],133:[function(require,module,exports){
 !function() {
   var topojson = {
     version: "1.6.8",
@@ -45523,7 +45608,7 @@ if (typeof module !== 'undefined') module.exports = toGeoJSON;
   else this.topojson = topojson;
 }();
 
-},{}],133:[function(require,module,exports){
+},{}],134:[function(require,module,exports){
 var Vue // late bind
 var map = Object.create(null)
 var shimmed = false
@@ -45824,7 +45909,7 @@ function format (id) {
   return match ? match[0] : id
 }
 
-},{}],134:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 /*!
  * vue-router v0.7.13
  * (c) 2016 Evan You
@@ -48534,7 +48619,7 @@ function format (id) {
   return Router;
 
 }));
-},{}],135:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v1.0.26
@@ -58611,7 +58696,7 @@ setTimeout(function () {
 
 module.exports = Vue;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":129}],136:[function(require,module,exports){
+},{"_process":130}],137:[function(require,module,exports){
 /*!
  * Vuex v1.0.0-rc.2
  * (c) 2016 Evan You
@@ -59274,7 +59359,7 @@ module.exports = Vue;
   return index;
 
 }));
-},{}],137:[function(require,module,exports){
+},{}],138:[function(require,module,exports){
 module.exports = parse;
 module.exports.parse = parse;
 module.exports.stringify = stringify;
