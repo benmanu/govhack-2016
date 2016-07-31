@@ -1,5 +1,7 @@
 # Docket (govhack-2016)
 
+Built on [Ionic](http://ionicframework.com/) for the application wrapper, and [Vue](https://vuejs.org/) for the view templating and routing.
+
 Uses the [Leaflet](http://leafletjs.com/) open-source JavaScript library for mobile-friendly interactive maps to display the geo-data.
 
 Icons sourced from [Googles material design](https://design.google.com/icons/) resources, available under the Apache License Version 2.0.
