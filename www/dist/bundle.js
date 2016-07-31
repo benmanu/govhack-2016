@@ -6176,7 +6176,7 @@ var router = new _vueRouter2.default({
 
 router.map({
   '/': {
-    component: _HomeView2.default
+    component: _HutSearchView2.default
   },
   '/locations': {
     component: _LocationView2.default
@@ -7178,27 +7178,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 exports.default = {
     components: {},
-    methods: {
-        // Perform actions of any kind
-        callDoThing: function callDoThing() {
-            this.doThing('new value');
-        }
-    },
+    methods: {},
     created: function created() {
         // Do something when this view is instantiated
     },
 
     vuex: {
-        getters: {
-            thing: function thing(state) {
-                return state.thing;
-            }
-        },
+        getters: {},
         actions: actions
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<h1>Home</h1>\n<p>yo</p>\n<button @click=\"callDoThing()\">{{ thing }}</button>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"row home\">\n    <div class=\"col-xs-12\">\n        <img class=\"home__logo\" src=\"dist/images/brand.png\" alt=\"DOCKET Logo\">\n    </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -7622,8 +7613,6 @@ exports.default = {
 
         // add the layer to the map
         this.map.addLayer(hutLayer);
-        this.map.addLayer(trackLayer);
-        this.map.addLayer(campLayer);
 
         // add layer controls
         _leaflet2.default.control.layers({}, {
