@@ -19,6 +19,7 @@ import ReviewView from './vue-components/views/ReviewView.vue';
 import PendingTransactionsView from './vue-components/views/PendingTransactionsView.vue';
 import HutSearchView from './vue-components/views/HutSearchView.vue';
 import HutView from './vue-components/views/HutView.vue';
+import CheckInView from './vue-components/views/CheckInView.vue';
 
 // Routing and Vue setup
 Vue.config.debug = true;
@@ -75,7 +76,11 @@ router.map({
   },
   '/hut/:hutIndex': {
     component: HutView
+  },
+  '/checkin': {
+    component: CheckInView
   }
+
 });
 
 router.start(DocketApp, '.docket-app');
