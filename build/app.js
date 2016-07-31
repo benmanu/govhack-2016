@@ -16,6 +16,7 @@ import RegisterView from './vue-components/views/RegisterView.vue';
 import HutsVisitedView from './vue-components/views/HutsVisitedView.vue';
 import UserSettingsView from './vue-components/views/UserSettingsView.vue';
 import ReviewView from './vue-components/views/ReviewView.vue';
+import ReportView from './vue-components/views/ReportAProblemView.vue';
 import PendingTransactionsView from './vue-components/views/PendingTransactionsView.vue';
 import HutSearchView from './vue-components/views/HutSearchView.vue';
 import HutView from './vue-components/views/HutView.vue';
@@ -30,11 +31,6 @@ var DocketApp = Vue.extend({
   store,
   methods: {
     checkOnlineStatus() {
-      console.log("online");
-      // if (!navigator.onLine) {
-      //   this.$set('isOnline', false);
-      //   return;
-      // }
     }
   },
   created() {
@@ -65,8 +61,11 @@ router.map({
   '/settings': {
     component: UserSettingsView
   },
-  '/review': {
+  '/review/:hutIndex': {
     component: ReviewView
+  },
+  '/report/:hutIndex': {
+    component: ReportView
   },
   '/pending-transactions': {
     component: PendingTransactionsView
