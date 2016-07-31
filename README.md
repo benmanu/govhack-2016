@@ -1,4 +1,4 @@
-# Docket (govhack-2016 - [Demo](http://benmanu.github.io/govhack-2016/))
+# Docket (govhack-2016 - [Demo](http://nought.ninja/))
 
 Built on [Ionic](http://ionicframework.com/) for the application wrapper, and [Vue](https://vuejs.org/) for the view templating and routing.
 
