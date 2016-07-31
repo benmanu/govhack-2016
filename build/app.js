@@ -51,7 +51,7 @@ var router = new VueRouter({
 
 router.map({
   '/': {
-    component: HomeView
+    component: HutSearchView
   },
   '/locations': {
     component: LocationView

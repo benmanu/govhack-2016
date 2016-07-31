@@ -1,26 +1,21 @@
 <template>
-    <h1>Home</h1>
-    <p>yo</p>
-    <button @click="callDoThing()">{{ thing }}</button>
+    <div class="row home">
+        <div class="col-xs-12">
+            <img class="home__logo" src="dist/images/brand.png" alt="DOCKET Logo">
+        </div>
+    </div>
 </template>
 <script>
     import * as actions from '../actions'
 
     export default {
         components: { },
-        methods: {
-            // Perform actions of any kind
-            callDoThing() {
-                this.doThing('new value');
-            }
-        },
+        methods: { },
         created() {
             // Do something when this view is instantiated
         },
         vuex: {
-            getters: {
-                thing: state => state.thing
-            },
+            getters: {},
             actions: actions
         }
     }
