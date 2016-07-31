@@ -3196,12 +3196,40 @@ form
 
 .card-title {
   margin-bottom: 0.75rem; }
+  .card-title--has-status {
+    margin-right: 70px; }
+
+h4.card-title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eceeef; }
+
+.card-title__status {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f; }
+  .card-title__status--open {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+
+.card-title__bookmark {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  cursor: pointer; }
 
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0; }
 
-.card-text:last-child {
+.card-text {
   margin-bottom: 0; }
 
 .card-link:hover {
@@ -3307,6 +3335,9 @@ form
   bottom: 0;
   left: 0;
   padding: 1.25rem; }
+
+.card-img-w {
+  max-width: 100%; }
 
 .card-img-top {
   border-radius: 0.25rem 0.25rem 0 0; }
@@ -5501,15 +5532,15 @@ a.bg-danger:focus, a.bg-danger:hover {
   height: 48px; }
 
 .content {
-  margin-top: 0.5rem; }
-  @media (min-width: 769px) {
-    .content {
-      display: block;
-      position: fixed;
-      margin-top: 0px;
-      top: 48px;
-      bottom: 0px;
-      overflow-y: scroll; } }
+  margin-top: 0.5rem;
+  display: block;
+  position: fixed;
+  top: 48px;
+  bottom: 0px;
+  overflow-y: scroll; }
+  .content--sidebar-active {
+    position: relative;
+    top: 0px; }
 
 /*
 #Components
@@ -5547,6 +5578,7 @@ Styleguide 1.0
   display: none; }
 
 .sidebar__nav {
+  width: 100%;
   padding: 0.5rem 0; }
 
 .sidebar__nav-link {
