@@ -39,6 +39,10 @@ const mutations = {
         state.camps.push(newvalue);
     },
 
+    GET_HUT(state, index) {
+        state.hut = state.huts[index];
+    },
+
     SELECT_HUT(state, newvalue) {
         state.hut = newvalue;
     },

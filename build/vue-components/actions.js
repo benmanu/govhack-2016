@@ -10,6 +10,9 @@ export const addTrack = (store, data) => {
 export const addCamp = (store, data) => {
     store.dispatch('ADD_CAMP', data)
 }
+export const getHut = (store, index) => {
+    store.dispatch('GET_HUT', index)
+}
 export const selectHut = (store, data) => {
     store.dispatch('SELECT_HUT', data)
     store.dispatch('SELECT_TRACK', null)

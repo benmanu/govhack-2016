@@ -18,6 +18,7 @@ import UserSettingsView from './vue-components/views/UserSettingsView.vue';
 import ReviewView from './vue-components/views/ReviewView.vue';
 import PendingTransactionsView from './vue-components/views/PendingTransactionsView.vue';
 import HutSearchView from './vue-components/views/HutSearchView.vue';
+import HutView from './vue-components/views/HutView.vue';
 
 // Routing and Vue setup
 Vue.config.debug = true;
@@ -71,6 +72,9 @@ router.map({
   },
   '/hut-search': {
     component: HutSearchView
+  },
+  '/hut/:hutIndex': {
+    component: HutView
   }
 });
 
