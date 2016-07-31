@@ -55,14 +55,14 @@
         </div>
         <div class="row">
           <div class="col">
-            <button class="button button-positive" @click="navigateToReview()">
+            <a v-link="{ path: '/review/' + $index }" class="button button-positive">
               Write a review
-            </button>
+            </a>
           </div>
           <div class="col">
-            <button class="button button-assertive" @click="reportProblem()">
+            <a v-link="{ path: '/report/' + $index }" class="button button-assertive">
               Report a problem
-            </button>
+            </a>
           </div>
           <div class="col" v-show="hut.price && !hut.paid">
             <button class="button button-balanced" @click="schedulePayment()">
@@ -131,13 +131,10 @@
               $('#hut-description-' + a).toggle();
             },
             schedulePayment() {
-              alert('Your payment has been scheduled.');
-            },
-            navigateToReview() {
-              alert('Not implemented yet');
-            },
-            reportProblem() {
-              alert('Thanks for letting us know');
+              if (confirm("Do you want to proceed with payment")) {
+                  alert('Payment approved');
+                  this.$router.go('/pending-transactions');
+              }
             },
             setSearchType(type) {
               this.$set('searchType', type);

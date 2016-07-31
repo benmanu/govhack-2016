@@ -2,22 +2,22 @@
   <form v-on:submit.prevent>
     <div class="row">
       <div class="col">
-        <h4>Review the {{ hut.name }} </h4></div>
+        <h4> {{ hut.name }} </h4></div>
       <div class="col"> </div>
     </div>
-    <div class="form-group" v-show="!reviewSubmited">
-      <label for="review">Review:</label>
-      <textarea class="form-control" rows="5" id="review"></textarea>
+    <div class="form-group" v-show="!reportSubmited">
+      <label for="report">What went wrong? :</label>
+      <textarea class="form-control" rows="5" id="report"></textarea>
     </div>
-    <div class="row" v-show="reviewSubmited">
+    <div class="row" v-show="reportSubmited">
       <div class="col">
-        <p>Thank you for the review.</p>
+        <p>Your report has been submited</p>
       </div>
     </div>
-    <div class="row" v-show="!reviewSubmited">
+    <div class="row" v-show="!reportSubmited">
       <div class="col col-90"></div>
       <div class="col">
-        <button class="btn btn-primary" @click="submitReview()">Submit</button>
+        <button class="btn btn-primary" @click="submitReport()">Submit</button>
       </div>
     </div>
   </form>
@@ -30,7 +30,7 @@
         components: { },
         data() {
           return {
-            reviewSubmited: false,
+            reportSubmited: false,
             hut: {
               'name': "Ball Hut",
               'region': "Cantrbury",
@@ -44,8 +44,8 @@
         },
         methods: {
             // Perform actions of any kind
-            submitReview() {
-              this.$set('reviewSubmited', true);
+            submitReport() {
+              this.$set('reportSubmited', true);
             }
         },
         ready() {
