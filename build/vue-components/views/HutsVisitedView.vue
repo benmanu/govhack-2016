@@ -6,18 +6,21 @@
     .item .badge {
       margin-top: 10px;
     }
+    .label.label-default {
+      height: 20px;
+    }
 
   </style>
   <div class="row">
-    <div class="col">
+    <div class="col col-20">
     </div>
     <div class="col">
-      <span class="label label-default" @click="setSearchType('all')">All</span>
+      <span class="label label-default label-lg" @click="setSearchType('all')">All</span>
       <span class="label label-default" @click="setSearchType('today')">Today</span>
       <span class="label label-default" @click="setSearchType('lastWeek')">Last week</span>
       <span class="label label-default" @click="setSearchType('lastMonth')">Last month</span>
     </div>
-    <div class="col">
+    <div class="col col-20">
     </div>
   </div>
   <div class="list card">

@@ -2,8 +2,9 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>govhack - 2016</title>
+    <title>Docket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/png" href="/favicon.png"/>
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="dist/bundle.css" media="screen">
 </head>
@@ -23,21 +24,26 @@
                       <i class="material-icons material-icons--sm">explore</i> Locations</a>
                 </li>
                 <li class="nav-item sidebar__nav-item">
+                    <a v-link="{ path: '/hut-search' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">store</i> Huts</a>
+                </li>
+                <li class="nav-item sidebar__nav-item">
                     <a v-link="{ path: '/huts-visited' }" class="nav-link sidebar__nav-link" href="#">
                       <i class="material-icons material-icons--sm">store</i> Huts Visited</a>
                 </li>
                 <li class="nav-item sidebar__nav-item">
-                    <a v-link="{ path: '/settings' }" class="nav-link sidebar__nav-link" href="#">
-                      <i class="material-icons material-icons--sm">settings</i> Settings</a>
+                    <a v-link="{ path: '/checkin' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">done</i> Check-in</a>
                 </li>
                 <li class="nav-item sidebar__nav-item">
                     <a v-link="{ path: '/pending-transactions' }" class="nav-link sidebar__nav-link" href="#">
                       <i class="material-icons material-icons--sm">payment</i> Payments</a>
                 </li>
                 <li class="nav-item sidebar__nav-item">
-                    <a v-link="{ path: '/hut-search' }" class="nav-link sidebar__nav-link" href="#">
-                      <i class="material-icons material-icons--sm">search</i> Search</a>
+                    <a v-link="{ path: '/settings' }" class="nav-link sidebar__nav-link" href="#">
+                      <i class="material-icons material-icons--sm">settings</i> Settings</a>
                 </li>
+
             </ul>
         </div>
     </div>
