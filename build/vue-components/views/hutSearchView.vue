@@ -26,7 +26,7 @@
     <ul class="list">
       <li class="item" v-for="hut in huts | customSearch search">
         <div class="row">
-          <div class="col"><em>Region</em></div>
+          <div class="col"> {{ hut.properties.region }}</div>
           <div class="col">{{ hut.properties.DESCRIPTION }}</div>
           <div class="col">{{ hut.properties.OBJECT_TYPE_DESCRIPTION }}</div>
           <div class="col">
@@ -41,7 +41,8 @@
 <script>
     import L from 'leaflet';
     import omnivore from 'leaflet-omnivore';
-    import * as actions from '../actions'
+    import * as actions from '../actions';
+    import _ from 'lodash';
 
     export default {
         components: { },
@@ -103,7 +104,12 @@
         },
         vuex: {
             getters: {
-                huts: state => state.huts
+                huts: state => {
+                   state.huts.forEach(hut => {
+                     hut.properties['region'] = "Canterbury";
+                  });
+                  return state.huts;
+                }
             },
             actions: actions
         }
